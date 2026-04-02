@@ -1,65 +1,233 @@
 import Image from "next/image";
+import Link from "next/link";
+import heroBg from "@/assets/trung_tam/1.jpg";
+import aboutImg from "@/assets/trung_tam/2.jpg";
+import galleryImg1 from "@/assets/trung_tam/3.jpg";
+import galleryImg2 from "@/assets/trung_tam/4.jpg";
+import gallery5 from "@/assets/trung_tam/5.jpg";
+import gallery6 from "@/assets/trung_tam/6.jpg";
+import gallery7 from "@/assets/trung_tam/7.jpg";
+import gallery8 from "@/assets/trung_tam/8.jpg";
+import gallery9 from "@/assets/trung_tam/9.jpg";
+import gallery10 from "@/assets/trung_tam/10.jpg";
+import { siteConfig, coreValues, services, teamMembers } from "@/lib/data";
 
-export default function Home() {
+const galleryImages = [
+  { src: gallery5, alt: "Hoạt động kỹ năng sống" },
+  { src: gallery6, alt: "Giờ học can thiệp sớm" },
+  { src: gallery7, alt: "Hoạt động nhóm" },
+  { src: gallery8, alt: "Không gian học tập" },
+  { src: gallery9, alt: "Hoạt động ngoại khóa" },
+  { src: gallery10, alt: "Tương tác giáo viên và trẻ" },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <>
+      {/* Hero */}
+      <section className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-secondary-dark sm:min-h-[600px]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src={heroBg}
+          alt="Hoạt động tại Trung tâm VH"
+          fill
           priority
+          className="object-cover opacity-40"
+          sizes="100vw"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <div className="relative z-10 mx-auto max-w-3xl px-4 py-20 text-center text-white">
+          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            {siteConfig.name}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-4 text-xl font-medium text-white/90 sm:text-2xl">
+            {siteConfig.slogan}
           </p>
+          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base">
+            {siteConfig.description}
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <Link
+              href="/dich-vu"
+              className="rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-primary-dark"
+            >
+              Tìm hiểu dịch vụ
+            </Link>
+            <Link
+              href="/lien-he"
+              className="rounded-full border-2 border-white/60 px-8 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              Đặt lịch tư vấn
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* About */}
+      <section className="bg-white py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src={aboutImg}
+                alt="Không gian học tập tại Trung tâm VH"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-secondary-dark sm:text-4xl">
+                Về Trung tâm VH
+              </h2>
+              <p className="mt-4 leading-relaxed text-muted">
+                Trung tâm VH được thành lập với sứ mệnh đồng hành cùng trẻ em và
+                gia đình trên hành trình phát triển. Chúng tôi tin rằng mỗi trẻ
+                đều có tiềm năng riêng, và với sự hỗ trợ phù hợp, mọi trẻ đều có
+                thể vươn lên.
+              </p>
+              <p className="mt-3 leading-relaxed text-muted">
+                Với đội ngũ chuyên gia giàu kinh nghiệm và phương pháp tiếp cận
+                cá nhân hoá, chúng tôi cam kết mang đến môi trường giáo dục an
+                toàn, tích cực và đầy sáng tạo cho mỗi em nhỏ.
+              </p>
+            </div>
+          </div>
+
+          {/* Core values */}
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {coreValues.map((value) => (
+              <div
+                key={value.title}
+                className="rounded-2xl border border-border bg-primary-light/50 p-6 transition-shadow hover:shadow-md"
+              >
+                <h3 className="text-lg font-bold text-primary-dark">{value.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-secondary-light py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-secondary-dark sm:text-4xl">
+              Lĩnh vực hoạt động
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted">
+              Trung tâm VH cung cấp các dịch vụ chuyên môn đa dạng, đáp ứng nhu
+              cầu phát triển toàn diện của trẻ.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, i) => (
+              <Link
+                key={service.id}
+                href={`/dich-vu#${service.id}`}
+                className={`group rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg ${
+                  i >= 3 ? "sm:col-span-1 lg:col-span-1" : ""
+                }`}
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-2xl">
+                  {["🧠", "🌱", "🤝", "⭐", "💬"][i]}
+                </div>
+                <h3 className="text-lg font-bold text-foreground group-hover:text-primary-dark">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {service.shortDesc}
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/dich-vu"
+              className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary-dark"
+            >
+              Xem chi tiết dịch vụ
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="bg-white py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-secondary-dark sm:text-4xl">
+              Đội ngũ nhân sự
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted">
+              Đội ngũ chuyên gia tận tâm, được đào tạo chuyên sâu và giàu kinh
+              nghiệm trong lĩnh vực tâm lý và giáo dục trẻ em.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {teamMembers.map((member, i) => (
+              <div key={member.name} className="text-center">
+                <div className="relative mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full bg-secondary-light">
+                  <Image
+                    src={i % 2 === 0 ? galleryImg1 : galleryImg2}
+                    alt={`Ảnh ${member.name}`}
+                    fill
+                    className="object-cover"
+                    sizes="160px"
+                  />
+                </div>
+                <h3 className="text-base font-bold text-foreground">{member.name}</h3>
+                <p className="text-sm font-medium text-primary-dark">{member.role}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="bg-primary-light/40 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-10 text-center text-3xl font-bold text-secondary-dark sm:text-4xl">
+            Hình ảnh hoạt động
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {galleryImages.map((img, i) => (
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-secondary py-16 text-white sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Bạn cần tư vấn cho con?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-white/85">
+            Hãy để Trung tâm VH đồng hành cùng bạn. Liên hệ ngay để được tư vấn
+            miễn phí và đặt lịch hẹn.
+          </p>
+          <Link
+            href="/lien-he"
+            className="mt-8 inline-flex rounded-full bg-primary px-10 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-primary-dark"
+          >
+            Liên hệ ngay
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
