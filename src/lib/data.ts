@@ -1,13 +1,13 @@
 export const siteConfig = {
   name: "Trung tâm VH",
   fullName: "Trung tâm Giáo dục VH",
-  slogan: "Thấu hiểu năng lực — hỗ trợ phát triển",
+  slogan: "Thấu hiểu năng lực - Hỗ trợ phát triển",
   description:
     "Trung tâm VH luôn tôn trọng sự khác biệt của mỗi cá nhân, khám phá và phát huy những điểm mạnh, khắc phục những điểm yếu, để mỗi trẻ đều được phát triển phù hợp với khả năng ở một môi trường luôn có sự thấu cảm và đồng hành.",
   address:
     "150 Lê Văn Sỹ, Phường 10, Quận Phú Nhuận, TP. Hồ Chí Minh, Việt Nam",
   email: "kinangsongvh@gmail.com",
-  phone: "0909 123 456",
+  phone: "0817.999.081",
   url: "https://trungtamvh.vn",
 };
 
@@ -45,66 +45,295 @@ export const coreValues = [
 export const services = [
   {
     id: "kham-test-tam-ly",
-    title: "Khám — Test tâm lý",
+    title: "Khám - test tâm lý",
     shortDesc:
-      "Đánh giá toàn diện năng lực nhận thức, ngôn ngữ, hành vi và cảm xúc của trẻ thông qua các công cụ đo lường chuyên môn.",
+      "Khám - test tâm lý - đánh giá phát triển nhằm xác định khó khăn tâm lý, mức độ phát triển, điểm mạnh và điểm yếu của mỗi trẻ.",
     fullDesc:
-      "Chúng tôi sử dụng các bộ công cụ đánh giá chuẩn quốc tế kết hợp quan sát lâm sàng để xác định mức độ phát triển của trẻ trên nhiều lĩnh vực: nhận thức, ngôn ngữ, vận động, hành vi, cảm xúc và kỹ năng xã hội. Kết quả được phân tích chi tiết và tư vấn trực tiếp cho phụ huynh.",
+      "Khám - test - tư vấn - điều trị tâm lý nhi được thực hiện bởi đội ngũ chuyên môn đa ngành, sử dụng những phương pháp và công cụ tin cậy để chẩn đoán các khó khăn tâm lý, đồng thời xác định mức độ phát triển hiện tại của trẻ.",
   },
   {
     id: "can-thiep-som",
     title: "Can thiệp sớm",
     shortDesc:
-      "Chương trình can thiệp chuyên biệt cho trẻ có dấu hiệu chậm phát triển, rối loạn phổ tự kỷ, tăng động giảm chú ý.",
+      "Chương trình dành cho trẻ từ 18 tháng - 6 tuổi, hỗ trợ khắc phục khó khăn cốt lõi và thúc đẩy phát triển phù hợp với lứa tuổi.",
     fullDesc:
-      "Chương trình can thiệp sớm được xây dựng dựa trên kết quả đánh giá, bao gồm các hoạt động trị liệu ngôn ngữ, vận động, điều hoà cảm giác và phát triển kỹ năng xã hội. Mỗi trẻ được lên kế hoạch cá nhân và theo dõi tiến bộ định kỳ.",
+      "Can thiệp sớm hỗ trợ trẻ phát triển toàn diện các kỹ năng tâm vận động, nhận thức, ngôn ngữ, giao tiếp, tự lập và tương tác xã hội thông qua lộ trình cá nhân hóa.",
   },
   {
     id: "giao-duc-hoa-nhap",
     title: "Giáo dục hoà nhập",
     shortDesc:
-      "Hỗ trợ trẻ hoà nhập vào môi trường lớp học thông thường với sự đồng hành của giáo viên chuyên biệt.",
+      "Dành cho trẻ từ 6 tuổi - 13 tuổi, hỗ trợ phát triển điểm mạnh và giảm thiểu những hành vi chưa phù hợp.",
     fullDesc:
-      "Chúng tôi phối hợp với nhà trường và gia đình để xây dựng kế hoạch giáo dục cá nhân (IEP), hỗ trợ trẻ phát triển các kỹ năng học tập, giao tiếp và tương tác xã hội cần thiết để hoà nhập thành công trong môi trường giáo dục phổ thông.",
+      "Chương trình giáo dục hoà nhập tập trung vào kỹ năng học tập, nhận thức - ngôn ngữ, tự lập - tự phục vụ và bảo vệ bản thân để trẻ thích nghi tốt hơn với môi trường học tập và sinh hoạt.",
   },
   {
     id: "ky-nang-song",
     title: "Kỹ năng sống",
     shortDesc:
-      "Các lớp học kỹ năng sống giúp trẻ tự tin, tự lập và phát triển các năng lực cần thiết cho cuộc sống.",
+      "Chương trình dành cho trẻ mầm non đến tiểu học, giúp trang bị những kỹ năng cơ bản để thích nghi và xử lý tình huống hằng ngày.",
     fullDesc:
-      "Chương trình kỹ năng sống bao gồm: kỹ năng tự phục vụ, kỹ năng giao tiếp, giải quyết vấn đề, quản lý cảm xúc, làm việc nhóm và an toàn cá nhân. Các hoạt động được thiết kế sinh động, phù hợp với lứa tuổi và mức độ phát triển của trẻ.",
+      "Chương trình kỹ năng sống được thiết kế theo độ tuổi, hướng đến phát triển toàn diện các kỹ năng nhận thức, ngôn ngữ - giao tiếp, tự lập, tương tác xã hội và thuyết trình cho trẻ.",
   },
   {
     id: "tham-van-dieu-tri-tam-ly",
     title: "Tham vấn, điều trị tâm lý",
     shortDesc:
-      "Dịch vụ tham vấn tâm lý cho trẻ em, thanh thiếu niên và phụ huynh về các vấn đề hành vi, cảm xúc.",
+      "Dịch vụ tham vấn, tư vấn và điều trị tâm lý nhằm tháo gỡ những vướng mắc trong học tập và cuộc sống.",
     fullDesc:
-      "Đội ngũ chuyên gia tâm lý có kinh nghiệm cung cấp dịch vụ tham vấn và trị liệu cho các vấn đề: lo âu, trầm cảm, rối loạn hành vi, khó khăn trong học tập, các vấn đề gia đình ảnh hưởng đến trẻ. Chúng tôi sử dụng các phương pháp trị liệu dựa trên bằng chứng khoa học.",
+      "Trung tâm VH cung cấp dịch vụ tư vấn, tham vấn và trị liệu tâm lý cho trẻ em và trẻ vị thành niên; hỗ trợ phát hiện sớm các vấn đề tâm lý - cảm xúc - hành vi, đồng thời giúp phụ huynh hiểu con, giảm stress nuôi dạy và cải thiện kỹ năng làm cha mẹ.",
   },
 ];
 
 export const teamMembers = [
   {
-    name: "ThS. Nguyễn Văn An",
-    role: "Giám đốc chuyên môn",
-    bio: "Thạc sĩ Tâm lý lâm sàng, hơn 15 năm kinh nghiệm trong lĩnh vực đánh giá và can thiệp tâm lý trẻ em.",
+    name: "BS.CKII Thái Thị Thanh Thuỷ",
+    role: "Thầy thuốc ưu tú - Chuyên gia tâm lý nhi",
+    bio: "Nguyên trưởng khoa tâm lý Bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám và điều trị tâm lý nhi.",
   },
   {
-    name: "ThS. Trần Thị Bích",
-    role: "Chuyên gia tâm lý",
-    bio: "Thạc sĩ Tâm lý giáo dục, chuyên sâu về tham vấn và trị liệu hành vi cho trẻ có nhu cầu đặc biệt.",
+    name: "ThS. Nguyễn Thị Vân",
+    role: "Thạc sĩ tâm lý",
+    bio: "Hơn 10 năm kinh nghiệm trong đánh giá, giáo dục, can thiệp và đồng hành cùng trẻ rối loạn phát triển.",
+  },
+];
+
+export type ServiceProcessStep = {
+  title: string;
+  description: string;
+};
+
+export type ServiceDetail = {
+  id: string;
+  eyebrow?: string;
+  headline: string;
+  intro: string;
+  targetTitle?: string;
+  targetDescription?: string;
+  targetList?: string[];
+  sectionTitle?: string;
+  sectionList?: string[];
+  specialNotes?: string[];
+  processTitle?: string;
+  processIntro?: string;
+  processSteps?: ServiceProcessStep[];
+  featuresTitle?: string;
+  features?: string[];
+  coursesTitle?: string;
+  courses?: string[];
+  team?: string[];
+};
+
+export const serviceDetails: ServiceDetail[] = [
+  {
+    id: "kham-test-tam-ly",
+    eyebrow: "Khám - test tâm lý tại Trung tâm VH",
+    headline: "Đánh giá toàn diện để hiểu đúng nhu cầu của trẻ",
+    intro:
+      "Khám - test - tư vấn - điều trị tâm lý nhi được thực hiện bởi đội ngũ chuyên môn đa ngành, sử dụng những phương pháp và công cụ tin cậy để chẩn đoán các vấn đề khó khăn tâm lý trẻ đang gặp phải, đồng thời xác định mức độ phát triển hiện tại của trẻ.",
+    targetTitle: "Khám - test tâm lý dành cho ai?",
+    targetDescription:
+      "Dịch vụ dành cho trẻ từ sơ sinh đến thiếu niên đang gặp các vấn đề rối loạn phát triển, rối loạn thần kinh hoặc rối loạn tâm lý.",
+    targetList: [
+      "Chậm nói",
+      "Rối loạn ngôn ngữ",
+      "Rối loạn âm lời nói",
+      "Rối loạn phổ tự kỷ",
+      "Rối loạn tăng động giảm chú ý",
+      "Khó khăn học tập",
+      "Rối loạn lo âu",
+      "Trầm cảm",
+      "Rối loạn định dạng giới tính",
+      "Khủng hoảng tuổi dậy thì",
+      "Ám ảnh sợ, sang chấn tâm lý",
+      "Rối loạn giấc ngủ",
+      "Rối loạn chống đối xã hội",
+      "Nghiện game",
+    ],
+    sectionTitle: "Các dịch vụ khám - test tâm lý",
+    sectionList: [
+      "Dịch vụ khám tâm lý",
+      "Dịch vụ test tâm lý",
+      "Dịch vụ tư vấn tâm lý",
+      "Dịch vụ điều trị tâm lý",
+    ],
+    specialNotes: [
+      "Test K-ABC đo lường chỉ số thông minh (IQ), năng lực học tập; giúp hiểu rõ điểm mạnh - điểm yếu của trẻ và so sánh với mức phát triển chung của lứa tuổi. Test dành cho trẻ từ 2.5 - 12 tuổi, đặc biệt phù hợp với trẻ gặp khó khăn về ngôn ngữ.",
+      "Test MMPI-A là trắc nghiệm đánh giá nhân cách toàn diện với các thang đo dành riêng cho thanh thiếu niên, hỗ trợ xác định vấn đề, chẩn đoán và lập kế hoạch điều trị cho trẻ từ 14 - 18 tuổi.",
+    ],
+    team: [
+      "Bác sĩ chuyên khoa II Thái Thị Thanh Thuỷ - thầy thuốc ưu tú, nguyên Trưởng khoa tâm lý Bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám và điều trị tâm lý nhi.",
+      "Thạc sĩ tâm lý Nguyễn Thị Vân, hơn 10 năm kinh nghiệm trong đánh giá, giáo dục can thiệp trẻ rối loạn phát triển.",
+    ],
   },
   {
-    name: "CN. Lê Minh Châu",
-    role: "Giáo viên giáo dục đặc biệt",
-    bio: "Cử nhân Giáo dục đặc biệt, giàu kinh nghiệm trong can thiệp sớm và giáo dục hoà nhập.",
+    id: "can-thiep-som",
+    eyebrow: "Can thiệp sớm",
+    headline: "Đồng hành từ sớm để trẻ phát triển vững nền tảng",
+    intro:
+      "Can thiệp sớm nhằm hỗ trợ sớm nhất để khắc phục những khó khăn cốt lõi, thúc đẩy phát triển phù hợp với tuổi.",
+    sectionTitle: "Các lĩnh vực phát triển trọng tâm",
+    sectionList: [
+      "Phát triển nhận thức tư duy",
+      "Phát triển ngôn ngữ - giao tiếp",
+      "Phát triển vận động thô",
+      "Phát triển vận động tinh",
+      "Phát triển kỹ năng tương tác xã hội",
+    ],
+    targetTitle: "Chương trình can thiệp sớm dành cho",
+    targetDescription:
+      "Trẻ từ 18 tháng - 6 tuổi gặp các khó khăn như chậm nói, rối loạn phổ tự kỷ, rối loạn tăng động giảm chú ý, rối loạn ngôn ngữ, rối loạn âm lời nói...",
+    processTitle: "Quy trình can thiệp sớm tại Trung tâm VH",
+    processIntro:
+      "Chúng tôi áp dụng quy trình can thiệp sớm chuyên nghiệp, khoa học và bảo mật.",
+    processSteps: [
+      {
+        title: "01. Tiếp nhận, tư vấn và đặt lịch hẹn",
+        description:
+          "Liên hệ qua hotline, zalo 0817.999.081 hoặc gửi thông tin trên website/page để được hỗ trợ ban đầu.",
+      },
+      {
+        title: "02. Khám - test tâm lý",
+        description:
+          "Gặp gỡ và làm việc cùng nhà chuyên môn để xác định các vấn đề khó khăn, mức độ phát triển hiện tại của trẻ và xây dựng lộ trình can thiệp 3 tháng.",
+      },
+      {
+        title: "03. Thực hiện can thiệp sớm",
+        description:
+          "Triển khai các khóa học can thiệp sớm cho trẻ cùng với các giáo viên can thiệp.",
+      },
+      {
+        title: "04. Tái đánh giá",
+        description:
+          "Tái đánh giá định kỳ 3 tháng/lần để xây dựng lộ trình tiếp theo và điều chỉnh kế hoạch can thiệp.",
+      },
+    ],
+    featuresTitle: "Chương trình can thiệp sớm tại Trung tâm VH có gì?",
+    features: [
+      "Đội ngũ chuyên môn đa ngành gồm bác sĩ, chuyên viên tâm lý và giáo viên can thiệp phối hợp xây dựng chương trình cho từng trẻ.",
+      "Ứng dụng các phương pháp can thiệp khoa học như phân tích hành vi ứng dụng, can thiệp hành vi - ngôn ngữ, giao tiếp tăng cường và thay thế, từng bước nhỏ...",
+      "Lộ trình can thiệp cụ thể, giáo án rõ ràng, đánh giá sát sao với tình trạng của học viên; phát triển toàn diện kỹ năng vận động, nhận thức, ngôn ngữ, tự lập và tương tác xã hội.",
+      "Phối hợp chặt chẽ cùng gia đình, trao đổi thường xuyên để tạo môi trường phát triển xuyên suốt và gắn kết.",
+    ],
+    coursesTitle: "Chương trình can thiệp sớm tại VH có những khóa học nào?",
+    courses: [
+      "Khóa cá nhân: một giáo viên với một trẻ, mỗi ca kéo dài một giờ học để theo sát biểu hiện và điều chỉnh can thiệp phù hợp.",
+      "Khóa nhóm: học theo nhóm nhỏ 2 - 3 học viên để tăng kỹ năng tương tác xã hội và hỗ trợ quan sát, điều chỉnh tốt hơn.",
+      "Khóa bán trú: kết hợp can thiệp cá nhân và nhóm nhỏ xuyên suốt trong ngày, tối ưu môi trường học tập cho từng nhu cầu riêng biệt.",
+    ],
   },
   {
-    name: "CN. Phạm Thuý Dung",
-    role: "Chuyên viên kỹ năng sống",
-    bio: "Cử nhân Tâm lý học, chuyên thiết kế và giảng dạy các chương trình kỹ năng sống cho trẻ em.",
+    id: "giao-duc-hoa-nhap",
+    eyebrow: "Giáo dục hoà nhập",
+    headline: "Phát triển kỹ năng học tập và thích nghi trong môi trường chung",
+    intro:
+      "Chương trình giáo dục hoà nhập nhằm hỗ trợ phát triển các điểm mạnh, giảm thiểu những hành vi không phù hợp; đồng thời giáo dục các kỹ năng học tập, nhận thức - ngôn ngữ, tự lập - tự phục vụ và bảo vệ bản thân.",
+    targetTitle: "Chương trình giáo dục hoà nhập dành cho",
+    targetDescription:
+      "Trẻ từ 6 tuổi - 13 tuổi gặp các khó khăn như chậm nói, chậm phát triển, rối loạn phổ tự kỷ hoặc khó khăn học tập.",
+    processTitle: "Quy trình giáo dục hoà nhập tại Trung tâm VH",
+    processIntro:
+      "Chúng tôi áp dụng quy trình giáo dục hoà nhập chuyên nghiệp, khoa học và bảo mật.",
+    processSteps: [
+      {
+        title: "01. Tiếp nhận, tư vấn và đặt lịch hẹn",
+        description:
+          "Liên hệ qua hotline, zalo 0817.999.081 hoặc gửi thông tin trên website/page để được hỗ trợ ban đầu.",
+      },
+      {
+        title: "02. Khám - test tâm lý",
+        description:
+          "Gặp gỡ nhà chuyên môn để xác định khó khăn, mức độ phát triển hiện tại của trẻ và tư vấn lựa chọn định hướng giáo dục phù hợp.",
+      },
+      {
+        title: "03. Thực hiện chương trình giáo dục hoà nhập",
+        description:
+          "Triển khai các khóa học can thiệp giáo dục cho trẻ cùng với giáo viên can thiệp.",
+      },
+      {
+        title: "04. Tái đánh giá",
+        description:
+          "Tái đánh giá định kỳ để xây dựng lộ trình giáo dục và điều chỉnh kế hoạch phù hợp.",
+      },
+    ],
+    featuresTitle: "Chương trình giáo dục hoà nhập tại Trung tâm VH có gì?",
+    features: [
+      "Đội ngũ chuyên môn đa ngành gồm bác sĩ, chuyên viên tâm lý và giáo viên can thiệp giàu kinh nghiệm phối hợp xây dựng, tổ chức chương trình cho mỗi trẻ.",
+      "Ứng dụng các phương pháp can thiệp khoa học như phân tích hành vi ứng dụng, can thiệp hành vi - ngôn ngữ, giao tiếp tăng cường và thay thế, từng bước nhỏ...",
+      "Phối hợp chặt chẽ cùng gia đình, trao đổi thường xuyên và cung cấp thông tin cụ thể về chương trình giáo dục để đồng hành lâu dài.",
+      "Lộ trình giáo dục cụ thể, giáo án rõ ràng, đánh giá sát sao; chú trọng phát triển đọc, viết, tính toán cơ bản, tự lập, tự phục vụ và kỹ năng tự bảo vệ bản thân.",
+    ],
+    coursesTitle: "Chương trình giáo dục hoà nhập tại VH có những khóa học nào?",
+    courses: [
+      "Khóa cá nhân: một giáo viên với một trẻ tại phòng riêng, tối ưu không gian học tập và giảm yếu tố phân tán chú ý.",
+      "Khóa nhóm: nhóm nhỏ 3 - 4 trẻ để tăng tương tác, kết nối bạn bè và xây dựng môi trường lớp học thu nhỏ.",
+      "Khóa bán trú: kết hợp cả hình thức can thiệp nhóm và cá nhân để đáp ứng nhu cầu riêng biệt của từng trẻ.",
+    ],
+  },
+  {
+    id: "ky-nang-song",
+    eyebrow: "Giáo dục kỹ năng sống",
+    headline: "Trang bị nền tảng để trẻ tự lập và ứng xử linh hoạt",
+    intro:
+      "Chương trình giáo dục kỹ năng sống hỗ trợ phát triển các kỹ năng mềm cần thiết trong cuộc sống của trẻ.",
+    targetTitle: "Chương trình kỹ năng sống hướng đến",
+    targetDescription:
+      "Với nguyên tắc giáo dục 'Lấy trẻ làm trung tâm', chương trình giúp trẻ tự lập, xây dựng nền tảng vững chắc và có thêm trải nghiệm xử lý các tình huống trong cuộc sống.",
+    sectionTitle: "Chương trình kỹ năng sống dành cho ai?",
+    sectionList: ["Trẻ mầm non", "Trẻ tiểu học"],
+    featuresTitle: "Chương trình giáo dục kỹ năng sống tại VH có gì?",
+    features: [
+      "Khung chương trình giáo dục kỹ năng theo độ tuổi và theo từng nhóm kỹ năng hướng đến phát triển toàn diện cho trẻ.",
+      "Kỹ năng nhận thức",
+      "Kỹ năng ngôn ngữ - giao tiếp",
+      "Kỹ năng tự lập tự phục vụ",
+      "Kỹ năng tương tác xã hội",
+      "Kỹ năng thuyết trình",
+    ],
+    coursesTitle: "Các khóa học giáo dục kỹ năng sống tại VH",
+    courses: [
+      "Khóa giáo dục kỹ năng sống bán trú",
+      "Khóa giáo dục kỹ năng sống một buổi",
+      "Lớp kỹ năng sống bán trú hè 'Hè trải nghiệm' được tổ chức hằng năm để trẻ vừa học vừa chơi và trưởng thành hơn mỗi ngày.",
+    ],
+  },
+  {
+    id: "tham-van-dieu-tri-tam-ly",
+    eyebrow: "Tham vấn, điều trị tâm lý",
+    headline: "Hỗ trợ trẻ và gia đình tháo gỡ khó khăn cảm xúc, hành vi",
+    intro:
+      "Trung tâm VH cung cấp dịch vụ tư vấn, tham vấn và trị liệu tâm lý cho trẻ em và trẻ vị thành niên; qua đó hỗ trợ phát hiện sớm các vấn đề tâm lý - cảm xúc - hành vi; giúp phụ huynh hiểu con, giảm stress nuôi dạy và cải thiện kỹ năng làm cha mẹ.",
+    targetTitle: "Tham vấn tâm lý dành cho ai?",
+    targetDescription:
+      "Dành cho trẻ từ 6 - 18 tuổi gặp khó khăn về cảm xúc, hành vi, tương tác xã hội hoặc khó khăn học tập.",
+    processTitle: "Quy trình tham vấn tâm lý tại Trung tâm VH",
+    processIntro:
+      "Chúng tôi áp dụng quy trình tham vấn, điều trị tâm lý chuyên nghiệp, khoa học và bảo mật.",
+    processSteps: [
+      {
+        title: "01. Tiếp nhận, tư vấn và đặt lịch hẹn",
+        description:
+          "Liên hệ thông qua hotline, zalo hoặc gửi thông tin trên web/page để được hỗ trợ ban đầu.",
+      },
+      {
+        title: "02. Điều trị tâm lý (nếu có)",
+        description: "Gặp gỡ bác sĩ để được hỗ trợ hoá dược khi cần thiết.",
+      },
+      {
+        title: "03. Phiên gặp đầu tiên",
+        description:
+          "Gặp gỡ và làm việc cùng nhà chuyên môn để tìm hiểu vấn đề và xác định mục tiêu tham vấn tâm lý.",
+      },
+      {
+        title: "04. Thiết lập kế hoạch trị liệu cá nhân",
+        description: "Thiết lập kế hoạch trị liệu phù hợp với từng trường hợp.",
+      },
+      {
+        title: "05. Đồng hành và đánh giá tiến triển định kỳ",
+        description:
+          "Tái đánh giá định kỳ 3 tháng/lần để xây dựng lộ trình can thiệp và điều chỉnh kế hoạch khi cần.",
+      },
+    ],
   },
 ];
 

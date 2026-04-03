@@ -12,6 +12,8 @@ import gallery9 from "@/assets/trung_tam/9.jpg";
 import gallery10 from "@/assets/trung_tam/10.jpg";
 import { siteConfig, coreValues, services, teamMembers } from "@/lib/data";
 
+const serviceIcons = ["🧠", "🌱", "🤝", "⭐", "💬"];
+
 const galleryImages = [
   { src: gallery5, alt: "Hoạt động kỹ năng sống" },
   { src: gallery6, alt: "Giờ học can thiệp sớm" },
@@ -65,7 +67,7 @@ export default function HomePage() {
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+            <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
                 src={aboutImg}
                 alt="Không gian học tập tại Trung tâm VH"
@@ -79,16 +81,16 @@ export default function HomePage() {
                 Về Trung tâm VH
               </h2>
               <p className="mt-4 leading-relaxed text-muted">
-                Trung tâm VH được thành lập với sứ mệnh đồng hành cùng trẻ em và
-                gia đình trên hành trình phát triển. Chúng tôi tin rằng mỗi trẻ
-                đều có tiềm năng riêng, và với sự hỗ trợ phù hợp, mọi trẻ đều có
-                thể vươn lên.
+                {siteConfig.description}
               </p>
-              <p className="mt-3 leading-relaxed text-muted">
-                Với đội ngũ chuyên gia giàu kinh nghiệm và phương pháp tiếp cận
-                cá nhân hoá, chúng tôi cam kết mang đến môi trường giáo dục an
-                toàn, tích cực và đầy sáng tạo cho mỗi em nhỏ.
-              </p>
+              <div className="mt-6 rounded-2xl bg-primary-light/60 p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-dark">
+                  Slogan
+                </p>
+                <p className="mt-2 text-lg font-bold text-secondary-dark">
+                  {siteConfig.slogan}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -130,7 +132,7 @@ export default function HomePage() {
                 }`}
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-2xl">
-                  {["🧠", "🌱", "🤝", "⭐", "💬"][i]}
+                  {serviceIcons[i]}
                 </div>
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary-dark">
                   {service.title}
@@ -159,17 +161,20 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-secondary-dark sm:text-4xl">
-              Đội ngũ nhân sự
+              Đội ngũ chuyên môn
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-muted">
-              Đội ngũ chuyên gia tận tâm, được đào tạo chuyên sâu và giàu kinh
-              nghiệm trong lĩnh vực tâm lý và giáo dục trẻ em.
+              Đội ngũ chuyên gia tận tâm, giàu kinh nghiệm trong khám, đánh giá,
+              giáo dục và can thiệp cho trẻ.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2">
             {teamMembers.map((member, i) => (
-              <div key={member.name} className="text-center">
+              <div
+                key={member.name}
+                className="rounded-2xl border border-border bg-primary-light/30 p-6 text-center"
+              >
                 <div className="relative mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full bg-secondary-light">
                   <Image
                     src={i % 2 === 0 ? galleryImg1 : galleryImg2}
@@ -179,7 +184,9 @@ export default function HomePage() {
                     sizes="160px"
                   />
                 </div>
-                <h3 className="text-base font-bold text-foreground">{member.name}</h3>
+                <h3 className="text-base font-bold text-foreground">
+                  {member.name}
+                </h3>
                 <p className="text-sm font-medium text-primary-dark">{member.role}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{member.bio}</p>
               </div>
@@ -196,7 +203,7 @@ export default function HomePage() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {galleryImages.map((img, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <div key={i} className="relative aspect-4/3 overflow-hidden rounded-2xl">
                 <Image
                   src={img.src}
                   alt={img.alt}
