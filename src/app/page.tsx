@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import heroBg from "@/assets/trung_tam/1.jpg";
 import aboutImg from "@/assets/trung_tam/2.jpg";
-import galleryImg1 from "@/assets/trung_tam/3.jpg";
-import galleryImg2 from "@/assets/trung_tam/4.jpg";
 import gallery5 from "@/assets/trung_tam/5.jpg";
 import gallery6 from "@/assets/trung_tam/6.jpg";
 import gallery7 from "@/assets/trung_tam/7.jpg";
@@ -43,9 +41,6 @@ export default function HomePage() {
           <p className="mt-4 text-xl font-medium text-white/90 sm:text-2xl">
             {siteConfig.slogan}
           </p>
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base">
-            {siteConfig.description}
-          </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/dich-vu"
@@ -83,14 +78,6 @@ export default function HomePage() {
               <p className="mt-4 leading-relaxed text-muted">
                 {siteConfig.description}
               </p>
-              <div className="mt-6 rounded-2xl bg-primary-light/60 p-5">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-dark">
-                  Slogan
-                </p>
-                <p className="mt-2 text-lg font-bold text-secondary-dark">
-                  {siteConfig.slogan}
-                </p>
-              </div>
             </div>
           </div>
 
@@ -101,8 +88,12 @@ export default function HomePage() {
                 key={value.title}
                 className="rounded-2xl border border-border bg-primary-light/50 p-6 transition-shadow hover:shadow-md"
               >
-                <h3 className="text-lg font-bold text-primary-dark">{value.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>
+                <h3 className="text-lg font-bold text-primary-dark">
+                  {value.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -150,7 +141,19 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary-dark"
             >
               Xem chi tiết dịch vụ
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </Link>
           </div>
         </div>
@@ -177,7 +180,7 @@ export default function HomePage() {
               >
                 <div className="relative mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full bg-secondary-light">
                   <Image
-                    src={i % 2 === 0 ? galleryImg1 : galleryImg2}
+                    src={member.image}
                     alt={`Ảnh ${member.name}`}
                     fill
                     className="object-cover"
@@ -187,8 +190,12 @@ export default function HomePage() {
                 <h3 className="text-base font-bold text-foreground">
                   {member.name}
                 </h3>
-                <p className="text-sm font-medium text-primary-dark">{member.role}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{member.bio}</p>
+                <p className="text-sm font-medium text-primary-dark">
+                  {member.role}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {member.bio}
+                </p>
               </div>
             ))}
           </div>
@@ -203,7 +210,10 @@ export default function HomePage() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {galleryImages.map((img, i) => (
-              <div key={i} className="relative aspect-4/3 overflow-hidden rounded-2xl">
+              <div
+                key={i}
+                className="relative aspect-4/3 overflow-hidden rounded-2xl"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}

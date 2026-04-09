@@ -42,33 +42,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service tree */}
-      <section className="bg-primary-light/30 py-12">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <h2 className="mb-8 text-center text-xl font-bold text-secondary-dark">
-            Sơ đồ dịch vụ
-          </h2>
-          <div className="flex flex-col items-center">
-            <div className="rounded-xl bg-secondary px-8 py-3 text-sm font-bold text-white">
-              Dịch vụ Trung tâm VH
-            </div>
-            <div className="h-6 w-px bg-secondary" />
-            <div className="grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-              {serviceSections.map((service) => (
-                <a
-                  key={service.id}
-                  href={`#${service.id}`}
-                  className="flex flex-col items-center gap-1 rounded-xl border border-border bg-white p-3 text-center text-xs font-medium shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <span className="text-xl">{service.icon}</span>
-                  <span>{service.summary.title}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services detail */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -84,7 +57,9 @@ export default function ServicesPage() {
                 }`}
               >
                 <div
-                  className={`grid items-center gap-10 lg:grid-cols-2 ${i % 2 !== 0 ? "lg:[direction:rtl]" : ""}`}
+                  className={`grid items-center gap-10 lg:grid-cols-2 ${
+                    i % 2 !== 0 ? "lg:[direction:rtl]" : ""
+                  }`}
                 >
                   <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
                     <Image
@@ -96,15 +71,14 @@ export default function ServicesPage() {
                     />
                   </div>
                   <div className={i % 2 !== 0 ? "lg:[direction:ltr]" : ""}>
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-dark">
-                      {service.eyebrow}
-                    </p>
-                    <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-2xl">
-                      {service.icon}
+                    <div className="flex items-center gap-4">
+                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-2xl">
+                        {service.icon}
+                      </div>
+                      <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+                        {service.summary.title}
+                      </h2>
                     </div>
-                    <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-                      {service.summary.title}
-                    </h2>
                     <p className="mt-3 text-lg font-medium text-secondary-dark">
                       {service.headline}
                     </p>
@@ -121,7 +95,9 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="grid gap-6 lg:grid-cols-2">
-                  {(service.targetTitle || service.targetDescription || service.targetList) && (
+                  {(service.targetTitle ||
+                    service.targetDescription ||
+                    service.targetList) && (
                     <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
                       {service.targetTitle && (
                         <h3 className="text-xl font-bold text-secondary-dark">

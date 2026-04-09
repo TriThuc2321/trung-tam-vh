@@ -1,3 +1,6 @@
+import bs_thuy from "@/assets/doi_ngu/bs_thuy.jpg";
+import ths_van from "@/assets/doi_ngu/ths_van.jpg";
+
 export const siteConfig = {
   name: "Trung tâm VH",
   fullName: "Trung tâm Giáo dục VH",
@@ -90,11 +93,13 @@ export const teamMembers = [
     name: "BS.CKII Thái Thị Thanh Thuỷ",
     role: "Thầy thuốc ưu tú - Chuyên gia tâm lý nhi",
     bio: "Nguyên trưởng khoa tâm lý Bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám và điều trị tâm lý nhi.",
+    image: bs_thuy,
   },
   {
     name: "ThS. Nguyễn Thị Vân",
     role: "Thạc sĩ tâm lý",
     bio: "Hơn 10 năm kinh nghiệm trong đánh giá, giáo dục, can thiệp và đồng hành cùng trẻ rối loạn phát triển.",
+    image: ths_van,
   },
 ];
 
@@ -263,7 +268,8 @@ export const serviceDetails: ServiceDetail[] = [
       "Phối hợp chặt chẽ cùng gia đình, trao đổi thường xuyên và cung cấp thông tin cụ thể về chương trình giáo dục để đồng hành lâu dài.",
       "Lộ trình giáo dục cụ thể, giáo án rõ ràng, đánh giá sát sao; chú trọng phát triển đọc, viết, tính toán cơ bản, tự lập, tự phục vụ và kỹ năng tự bảo vệ bản thân.",
     ],
-    coursesTitle: "Chương trình giáo dục hoà nhập tại VH có những khóa học nào?",
+    coursesTitle:
+      "Chương trình giáo dục hoà nhập tại VH có những khóa học nào?",
     courses: [
       "Khóa cá nhân: một giáo viên với một trẻ tại phòng riêng, tối ưu không gian học tập và giảm yếu tố phân tán chú ý.",
       "Khóa nhóm: nhóm nhỏ 3 - 4 trẻ để tăng tương tác, kết nối bạn bè và xây dựng môi trường lớp học thu nhỏ.",
