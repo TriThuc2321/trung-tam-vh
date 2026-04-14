@@ -1,0 +1,38 @@
+TRANG CHỦ
+Tên: Trung tâm VH
+Slogan: Thấu hiểu năng lực - Hỗ trợ phát triển
+
+VỀ TRUNG TÂM VH
+Trung tâm VH luôn tôn trọng sự khác biệt của mỗi cá nhân, khám phá và phát huy những điểm mạnh, khắc phục những điểm yếu, để mỗi trẻ đều được phát triển phù hợp với khả năng ở một môi trường luôn có sự thấu cảm và đồng hành.
+Đoạn giới thiệu: Trung tâm VH là đơn vị chuyên sâu trong lĩnh vực khám - test tâm lý, can thiệp sớm, giáo dục hoà nhập cho trẻ rối loạn phát triển, và trang bị kỹ năng sống, tham vấn tâm lý học đường cho trẻ. Với định hướng xây dựng nền tảng phát triển toàn diện ngay từ những năm đầu đời, chúng tôi áp dụng chương trình cá nhân hoá cho từng trẻ, tập trung phát triển nhận thức, tư duy logic,  ngôn ngữ - giao tiếp, kỹ năng tương tác xã hội thông qua các phương pháp giáo dục khoa học. Đội ngũ chuyên môn đa ngành giàu kinh nghiệm, vững kiến thức, tận tâm chăm sóc, đồng hành cùng gia đình mang đến môi trường học tập thấu hiểu,  tích cực, an toàn và hiệu quả, giúp trẻ từng bước tự tin và phát triển bền vững.
+
+LĨNH VỰC HOẠT ĐỘNG
+Khám - test tâm lý
+Khám - test tâm lý - đánh giá phát triển là một trong lĩnh vực hoạt động chính của trung tâm VH. Nhằm xác định các vấn đề khó khăn tâm lý trẻ gặp phải, mức độ phát triển, những điểm mạnh, điểm yếu của mỗi cá nhân.
+Sử dụng hình assets/hoat_dong/49.jpg
+
+Can thiệp sớm
+Chương trình can thiệp sớm dành cho các trẻ từ 18 tháng - 6 tuổi, nhằm hỗ trợ sớm nhất để khắc phục những khó khăn cốt lõi, thúc đẩy phát triển phù hợp với tuổi. Phát triển toàn diện các kỹ năng tâm vận động, nhận thức, ngôn ngữ, giao tiếp, tự lập, tương tác xã hội.
+Sử dụng hình assets/hoat_dong/11.jpg
+
+Giáo dục hoà nhập
+Dành cho các trẻ từ 6 tuổi - 13 tuổi. Nhằm hỗ trợ phát triển các điểm mạnh, giảm thiểu những hành vi không phù hợp. Giáo dục các kỹ năng học tập, nhận thức - ngôn ngữ, tự lập - tự phục vụ, bảo vệ bản thân.
+Sử dụng hình assets/hoat_dong/27.jpg
+
+Kỹ năng sống
+Chương trình kỹ năng sống dành cho các bé từ mầm non đến tiểu học, trang bị hành trang kỹ năng cơ bản mà mỗi cá nhân cần có để thích nghi và xử lý hiệu quả các tình huống trong cuộc sống hằng ngày.
+Sử dụng hình assets/hoat_dong/32.jpg
+
+Tham vấn, điều trị tâm lý
+Tham vấn, điều trị tâm lý để thân chủ tháo gỡ những vướng mắc, khó khăn trong học tập và cuộc sống.
+Sử dụng hình assets/dich_vu/2.jpg
+
+ĐỘI NGŨ CHUYÊN MÔN
+Bác sĩ chuyên khoa II Thái Thị Thanh Thuỷ, Thầy thuốc ưu tú, nguyên trưởng khoa tâm lý bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám, điều trị bệnh nhi.
+Sử dụng hình assets/doi_ngu/bs_thuy.jpg
+
+Thạc sĩ tâm lý Nguyễn Thị Vân, hơn 10 năm đánh giá, giáo dục, can thiệp và đồng hành cùng trẻ rối loạn phát triển
+Sử dụng hình assets/doi_ngu/ths_van.jpg
+
+HÌNH ẢNH CƠ SỞ VẬT CHẤT TRUNG TÂM VH
+Sử dụng hình assets/co_so_vat_chat

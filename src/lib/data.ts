@@ -6,7 +6,7 @@ export const siteConfig = {
   fullName: "Trung tâm Giáo dục VH",
   slogan: "Thấu hiểu năng lực - Hỗ trợ phát triển",
   description:
-    "Trung tâm VH luôn tôn trọng sự khác biệt của mỗi cá nhân, khám phá và phát huy những điểm mạnh, khắc phục những điểm yếu, để mỗi trẻ đều được phát triển phù hợp với khả năng ở một môi trường luôn có sự thấu cảm và đồng hành.",
+    "Trung tâm VH là đơn vị chuyên sâu trong lĩnh vực khám - test tâm lý, can thiệp sớm, giáo dục hòa nhập cho trẻ rối loạn phát triển, và trang bị kỹ năng sống, tham vấn tâm lý học đường cho trẻ. Với định hướng xây dựng nền tảng phát triển toàn diện ngay từ những năm đầu đời, chúng tôi áp dụng chương trình cá nhân hoá cho từng trẻ, tập trung phát triển nhận thức, tư duy logic,  ngôn ngữ - giao tiếp, kỹ năng tương tác xã hội thông qua các phương pháp giáo dục khoa học. Đội ngũ chuyên môn đa ngành giàu kinh nghiệm, vững kiến thức, tận tâm chăm sóc, đồng hành cùng gia đình mang đến môi trường học tập thấu hiểu,  tích cực, an toàn và hiệu quả, giúp trẻ từng bước tự tin và phát triển bền vững.",
   address:
     "150 Lê Văn Sỹ, Phường 10, Quận Phú Nhuận, TP. Hồ Chí Minh, Việt Nam",
   email: "kinangsongvh@gmail.com",
@@ -319,11 +319,11 @@ export const serviceDetails: ServiceDetail[] = [
       {
         title: "01. Tiếp nhận, tư vấn và đặt lịch hẹn",
         description:
-          "Liên hệ thông qua hotline, zalo hoặc gửi thông tin trên web/page để được hỗ trợ ban đầu.",
+          "Liên hệ thông qua các kênh: hotline; zalo; gửi thông tin trên web; page để được hỗ trợ ban đầu.",
       },
       {
         title: "02. Điều trị tâm lý (nếu có)",
-        description: "Gặp gỡ bác sĩ để được hỗ trợ hoá dược khi cần thiết.",
+        description: "Gặp gỡ bác sĩ để được hỗ trợ hoá dược nếu cần.",
       },
       {
         title: "03. Phiên gặp đầu tiên",
@@ -332,12 +332,11 @@ export const serviceDetails: ServiceDetail[] = [
       },
       {
         title: "04. Thiết lập kế hoạch trị liệu cá nhân",
-        description: "Thiết lập kế hoạch trị liệu phù hợp với từng trường hợp.",
+        description: "Thiết lập kế hoạch trị liệu.",
       },
       {
         title: "05. Đồng hành và đánh giá tiến triển định kỳ",
-        description:
-          "Tái đánh giá định kỳ 3 tháng/lần để xây dựng lộ trình can thiệp và điều chỉnh kế hoạch khi cần.",
+        description: "Đồng hành và đánh giá tiến triển cùng thân chủ.",
       },
     ],
   },

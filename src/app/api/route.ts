@@ -1,39 +1,42 @@
-import getContactTemplate from "@/components/templateMails/contact";
-import nodemailer from "nodemailer";
-
-const SMTP_USER = process.env.SMTP_USER;
-const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
-const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL;
+const ZALO_BOT_TOKEN = process.env.ZALO_BOT_TOKEN;
+const ZALO_CHAT_IDS = process.env.ZALO_CHAT_IDS;
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, message } = await request.json();
+    const { name, phone, message } = await request.json();
 
-    console.log("request body", { name, email, phone, message });
+    console.log("request body", { name, phone, message });
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASSWORD,
-      },
-    });
-    const mailOptions = {
-      from: SMTP_USER,
-      to: RECIPIENT_EMAIL,
-      subject: `New Contact Form Submission from ${name}`,
-      html: getContactTemplate({ name, email, phone, message }),
-    };
+    const text = `📩 Liên hệ mới\nHọ tên: ${name}\nSĐT: ${phone}\nNội dung: ${message}`;
 
-    await transporter.sendMail(mailOptions);
+    const chatIds = (ZALO_CHAT_IDS ?? "")
+      .split(",")
+      .map((id) => id.trim())
+      .filter(Boolean);
 
-    return new Response(JSON.stringify({ message: "Email sent successfully" }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    await Promise.all(
+      chatIds.map((chat_id) =>
+        fetch(
+          `https://bot-api.zaloplatforms.com/bot${ZALO_BOT_TOKEN}/sendMessage`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id, text }),
+          }
+        )
+      )
+    );
+
+    return new Response(
+      JSON.stringify({ message: "Message sent successfully" }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   } catch (error) {
-    console.error("Error sending email:", error);
-    return new Response(JSON.stringify({ message: "Error sending email" }), {
+    console.error("Error sending message:", error);
+    return new Response(JSON.stringify({ message: "Error sending message" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
