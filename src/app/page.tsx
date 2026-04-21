@@ -10,14 +10,13 @@ import svcKyNang from "@/assets/hoat_dong/32.jpg";
 import svcThamVan from "@/assets/dich_vu/2.jpg";
 // Facility gallery
 import csvc1 from "@/assets/co_so_vat_chat/1.jpg";
+import csvc2 from "@/assets/co_so_vat_chat/2.jpg";
 import csvc3 from "@/assets/co_so_vat_chat/3.jpg";
+import csvc4 from "@/assets/co_so_vat_chat/4.jpg";
 import csvc5 from "@/assets/co_so_vat_chat/5.jpg";
-import csvc8 from "@/assets/co_so_vat_chat/8.jpg";
-import csvc12 from "@/assets/co_so_vat_chat/12.jpg";
-import csvc15 from "@/assets/co_so_vat_chat/15.jpg";
-import { siteConfig, coreValues, services, teamMembers } from "@/lib/data";
+import csvc6 from "@/assets/co_so_vat_chat/6.jpg";
+import { siteConfig, services, teamMembers } from "@/lib/data";
 
-const serviceIcons = ["🧠", "🌱", "🤝", "⭐", "💬"];
 const serviceImages = [
   svcKhamTest,
   svcCanThiep,
@@ -28,11 +27,11 @@ const serviceImages = [
 
 const galleryImages = [
   { src: csvc1, alt: "Phòng học tại Trung tâm VH" },
-  { src: csvc3, alt: "Không gian can thiệp" },
-  { src: csvc5, alt: "Phòng tham vấn" },
-  { src: csvc8, alt: "Khu vực học nhóm" },
-  { src: csvc12, alt: "Sân hoạt động ngoài trời" },
-  { src: csvc15, alt: "Khu vực tiếp nhận" },
+  { src: csvc2, alt: "Không gian can thiệp" },
+  { src: csvc3, alt: "Phòng tham vấn" },
+  { src: csvc4, alt: "Khu vực học nhóm" },
+  { src: csvc5, alt: "Sân hoạt động ngoài trời" },
+  { src: csvc6, alt: "Khu vực tiếp nhận" },
 ];
 
 export default function HomePage() {
@@ -58,16 +57,13 @@ export default function HomePage() {
         />
         <div className="relative z-10 mx-auto max-w-7xl w-full px-4 py-24 sm:px-6 lg:px-8">
           <div className="max-w-xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary/90">
-              {siteConfig.fullName}
-            </p>
-            <h1 className="font-serif text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="font-serif text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-[80px]">
               {siteConfig.name}
             </h1>
-            <p className="mt-4 text-xl font-medium text-white/85 sm:text-2xl">
+            <p className="mt-4 text-2xl font-medium text-white/85 sm:text-2xl">
               {siteConfig.slogan}
             </p>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-white/70">
+            <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/70">
               Đồng hành cùng trẻ và gia đình qua những bước phát triển quan
               trọng nhất.
             </p>
@@ -120,36 +116,16 @@ export default function HomePage() {
               <div className="absolute -bottom-5 -right-5 hidden h-32 w-32 rounded-2xl bg-primary/20 lg:block" />
             </div>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-primary-dark">
+              <p className="text-md font-semibold uppercase tracking-widest text-primary-dark">
                 Về chúng tôi
               </p>
-              <h2 className="mt-2 font-serif text-3xl font-bold text-secondary-dark sm:text-4xl">
+              <h2 className="mt-2 font-serif text-4xl font-bold text-secondary-dark sm:text-5xl">
                 Về Trung tâm VH
               </h2>
               <p className="mt-5 leading-relaxed text-justify text-muted">
                 {siteConfig.description}
               </p>
             </div>
-          </div>
-
-          {/* Core values */}
-          <div className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {coreValues.map((value, i) => (
-              <div
-                key={value.title}
-                className="group rounded-2xl border border-border bg-primary-light/40 p-6 transition-all hover:-translate-y-1 hover:shadow-md"
-              >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-lg font-bold text-primary-dark">
-                  {["❤", "✦", "★", "◎"][i]}
-                </div>
-                <h3 className="font-serif text-lg font-bold text-secondary-dark">
-                  {value.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {value.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -158,10 +134,10 @@ export default function HomePage() {
       <section className="bg-secondary-light py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="mt-2 font-serif text-3xl font-bold text-secondary-dark sm:text-4xl">
+            <h2 className="mt-2 font-serif text-5xl font-bold text-secondary-dark">
               Lĩnh vực hoạt động
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-muted">
+            <p className="mx-auto mt-3 max-w-2xl text-muted text-lg">
               Trung tâm VH cung cấp các dịch vụ chuyên môn đa dạng, đáp ứng nhu
               cầu phát triển toàn diện của trẻ.
             </p>
@@ -171,10 +147,10 @@ export default function HomePage() {
             {services.map((service, i) => (
               <Link
                 key={service.id}
-                href={`/dich-vu#${service.id}`}
+                href={`/dich-vu/${service.id}`}
                 className="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="relative aspect-video overflow-hidden">
+                <div className="relative aspect-5/4 overflow-hidden">
                   <Image
                     src={serviceImages[i]}
                     alt={service.title}
@@ -185,7 +161,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                   <div className="absolute bottom-3 left-4 flex items-center gap-2">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-sm backdrop-blur-sm">
-                      {serviceIcons[i]}
+                      {service.icon}
                     </span>
                   </div>
                 </div>
@@ -245,10 +221,10 @@ export default function HomePage() {
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="mt-2 font-serif text-3xl font-bold text-secondary-dark sm:text-4xl">
+            <h2 className="mt-2 font-serif text-5xl font-bold text-secondary-dark ">
               Đội ngũ chuyên môn
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-muted">
+            <p className="mx-auto mt-3 max-w-2xl text-muted text-lg">
               Đội ngũ chuyên gia tận tâm, giàu kinh nghiệm trong khám, đánh giá,
               giáo dục và can thiệp cho trẻ.
             </p>

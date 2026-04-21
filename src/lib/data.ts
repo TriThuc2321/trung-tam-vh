@@ -8,7 +8,7 @@ export const siteConfig = {
   description:
     "Trung tâm VH là đơn vị chuyên sâu trong lĩnh vực khám - test tâm lý, can thiệp sớm, giáo dục hòa nhập cho trẻ rối loạn phát triển, và trang bị kỹ năng sống, tham vấn tâm lý học đường cho trẻ. Với định hướng xây dựng nền tảng phát triển toàn diện ngay từ những năm đầu đời, chúng tôi áp dụng chương trình cá nhân hoá cho từng trẻ, tập trung phát triển nhận thức, tư duy logic,  ngôn ngữ - giao tiếp, kỹ năng tương tác xã hội thông qua các phương pháp giáo dục khoa học. Đội ngũ chuyên môn đa ngành giàu kinh nghiệm, vững kiến thức, tận tâm chăm sóc, đồng hành cùng gia đình mang đến môi trường học tập thấu hiểu,  tích cực, an toàn và hiệu quả, giúp trẻ từng bước tự tin và phát triển bền vững.",
   address:
-    "150 Lê Văn Sỹ, Phường 10, Quận Phú Nhuận, TP. Hồ Chí Minh, Việt Nam",
+    "150 Lê Văn Sỹ, Phường Phú Nhuận, TP. Hồ Chí Minh, Việt Nam",
   email: "kinangsongvh@gmail.com",
   phone: "0817.999.081",
   url: "https://trungtamvh.vn",
@@ -48,6 +48,7 @@ export const coreValues = [
 export const services = [
   {
     id: "kham-test-tam-ly",
+    icon: "🧠",
     title: "Khám - test tâm lý",
     shortDesc:
       "Khám - test tâm lý - đánh giá phát triển nhằm xác định khó khăn tâm lý, mức độ phát triển, điểm mạnh và điểm yếu của mỗi trẻ.",
@@ -56,6 +57,7 @@ export const services = [
   },
   {
     id: "can-thiep-som",
+    icon: "🌱",
     title: "Can thiệp sớm",
     shortDesc:
       "Chương trình dành cho trẻ từ 18 tháng - 6 tuổi, hỗ trợ khắc phục khó khăn cốt lõi và thúc đẩy phát triển phù hợp với lứa tuổi.",
@@ -64,6 +66,7 @@ export const services = [
   },
   {
     id: "giao-duc-hoa-nhap",
+    icon: "🤝",
     title: "Giáo dục hoà nhập",
     shortDesc:
       "Dành cho trẻ từ 6 tuổi - 13 tuổi, hỗ trợ phát triển điểm mạnh và giảm thiểu những hành vi chưa phù hợp.",
@@ -72,6 +75,7 @@ export const services = [
   },
   {
     id: "ky-nang-song",
+    icon: "⭐",
     title: "Kỹ năng sống",
     shortDesc:
       "Chương trình dành cho trẻ mầm non đến tiểu học, giúp trang bị những kỹ năng cơ bản để thích nghi và xử lý tình huống hằng ngày.",
@@ -80,6 +84,7 @@ export const services = [
   },
   {
     id: "tham-van-dieu-tri-tam-ly",
+    icon: "💬",
     title: "Tham vấn, điều trị tâm lý",
     shortDesc:
       "Dịch vụ tham vấn, tư vấn và điều trị tâm lý nhằm tháo gỡ những vướng mắc trong học tập và cuộc sống.",
@@ -91,7 +96,7 @@ export const services = [
 export const teamMembers = [
   {
     name: "BS.CKII Thái Thị Thanh Thuỷ",
-    role: "Thầy thuốc ưu tú - Chuyên gia tâm lý nhi",
+    role: "Thầy thuốc ưu tú",
     bio: "Nguyên trưởng khoa tâm lý Bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám và điều trị tâm lý nhi.",
     image: bs_thuy,
   },

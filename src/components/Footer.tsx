@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
-import { navLinks, siteConfig } from "@/lib/data";
+import { navLinks, services, siteConfig } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -57,31 +57,16 @@ export default function Footer() {
               Dịch vụ
             </h3>
             <ul className="space-y-2.5">
-              <li>
-                <Link href="/dich-vu#kham-test-tam-ly" className="text-sm text-white/75 transition-colors hover:text-primary">
-                  Khám — Test tâm lý
-                </Link>
-              </li>
-              <li>
-                <Link href="/dich-vu#can-thiep-som" className="text-sm text-white/75 transition-colors hover:text-primary">
-                  Can thiệp sớm
-                </Link>
-              </li>
-              <li>
-                <Link href="/dich-vu#giao-duc-hoa-nhap" className="text-sm text-white/75 transition-colors hover:text-primary">
-                  Giáo dục hoà nhập
-                </Link>
-              </li>
-              <li>
-                <Link href="/dich-vu#ky-nang-song" className="text-sm text-white/75 transition-colors hover:text-primary">
-                  Kỹ năng sống
-                </Link>
-              </li>
-              <li>
-                <Link href="/dich-vu#tham-van-dieu-tri-tam-ly" className="text-sm text-white/75 transition-colors hover:text-primary">
-                  Tham vấn tâm lý
-                </Link>
-              </li>
+              {services.map((s) => (
+                <li key={s.id}>
+                  <Link
+                    href={`/dich-vu/${s.id}`}
+                    className="text-sm text-white/75 transition-colors hover:text-primary"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
