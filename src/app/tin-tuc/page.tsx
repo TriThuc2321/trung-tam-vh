@@ -5,9 +5,9 @@ import { newsArticles } from "@/lib/data";
 import placeholder from "@/assets/trung_tam/10.jpg";
 
 export const metadata: Metadata = {
-  title: "Tin tức",
+  title: "Tin tức & Sự kiện",
   description:
-    "Cập nhật tin tức mới nhất từ Trung tâm VH về các hoạt động, sự kiện và chương trình hỗ trợ trẻ em.",
+    "Cập nhật tin tức mới nhất từ Trung tâm VH: hội thảo, khai giảng các lớp kỹ năng sống, hợp tác giáo dục và kết quả can thiệp trẻ em tại Phú Nhuận, TP.HCM.",
   alternates: { canonical: "/tin-tuc" },
 };
 

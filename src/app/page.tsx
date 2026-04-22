@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import heroBg from "@/assets/trung_tam/1.jpg";
@@ -16,6 +17,19 @@ import csvc4 from "@/assets/co_so_vat_chat/4.jpg";
 import csvc5 from "@/assets/co_so_vat_chat/5.jpg";
 import csvc6 from "@/assets/co_so_vat_chat/6.jpg";
 import { siteConfig, services, teamMembers } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.fullName} — ${siteConfig.slogan}`,
+  description:
+    "Trung tâm VH chuyên khám tâm lý, can thiệp sớm, giáo dục hòa nhập, kỹ năng sống và tham vấn tâm lý cho trẻ em tại Phú Nhuận, TP.HCM. Đội ngũ chuyên gia giàu kinh nghiệm, chương trình cá nhân hóa.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: `${siteConfig.fullName} — ${siteConfig.slogan}`,
+    description:
+      "Trung tâm VH chuyên khám tâm lý, can thiệp sớm, giáo dục hòa nhập, kỹ năng sống và tham vấn tâm lý cho trẻ em tại Phú Nhuận, TP.HCM.",
+    url: siteConfig.url,
+  },
+};
 
 const serviceImages = [
   svcKhamTest,

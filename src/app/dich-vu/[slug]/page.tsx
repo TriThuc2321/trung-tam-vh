@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { serviceDetails, services } from "@/lib/data";
+import { serviceDetails, services, siteConfig } from "@/lib/data";
 
 import canThiepSom1 from "@/assets/dich_vu/can_thiep_som/1.jpg";
 import canThiepSom2 from "@/assets/dich_vu/can_thiep_som/2.jpg";
@@ -62,10 +62,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const detail = serviceDetails.find((s) => s.id === slug);
   const summary = services.find((s) => s.id === slug);
   if (!detail || !summary) return { title: "Dịch vụ" };
+  const title = `${summary.title} tại Trung tâm VH`;
   return {
-    title: summary.title,
-    description: summary.shortDesc,
+    title,
+    description: summary.fullDesc,
     alternates: { canonical: `/dich-vu/${slug}` },
+    openGraph: {
+      title,
+      description: summary.fullDesc,
+      url: `${siteConfig.url}/dich-vu/${slug}`,
+    },
   };
 }
 
@@ -98,8 +104,40 @@ export default async function ServiceDetailPage({ params }: Props) {
   const featureImg = serviceFeatureImages[index];
   const courseImgs = serviceCourseImages[index];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Trang chủ", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Dịch vụ", item: `${siteConfig.url}/dich-vu` },
+      { "@type": "ListItem", position: 3, name: summary.title, item: `${siteConfig.url}/dich-vu/${slug}` },
+    ],
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: summary.title,
+    description: summary.fullDesc,
+    provider: {
+      "@type": "MedicalBusiness",
+      "@id": `${siteConfig.url}/#organization`,
+      name: siteConfig.fullName,
+    },
+    url: `${siteConfig.url}/dich-vu/${slug}`,
+    areaServed: { "@type": "City", name: "TP. Hồ Chí Minh" },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* ── Breadcrumb bar (outside hero) ────────────────────────────────── */}
       <div className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">

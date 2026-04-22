@@ -423,33 +423,8 @@ export const newsArticles = [
   },
 ];
 
-export const knowledgeArticles = [
-  {
-    id: "dau-hieu-cham-phat-trien",
-    title: "Nhận biết sớm các dấu hiệu chậm phát triển ở trẻ nhỏ",
-    excerpt:
-      "Hiểu rõ các mốc phát triển bình thường và dấu hiệu cảnh báo giúp phụ huynh can thiệp kịp thời cho con...",
-    category: "Phát triển trẻ em",
-  },
-  {
-    id: "quan-ly-cam-xuc",
-    title: "Hướng dẫn phụ huynh giúp trẻ quản lý cảm xúc hiệu quả",
-    excerpt:
-      "Trẻ em cần được hỗ trợ để nhận diện, gọi tên và điều tiết cảm xúc. Dưới đây là những phương pháp phụ huynh có thể áp dụng...",
-    category: "Kỹ năng làm cha mẹ",
-  },
-  {
-    id: "tang-dong-giam-chu-y",
-    title: "ADHD ở trẻ em: Hiểu đúng để đồng hành đúng cách",
-    excerpt:
-      "Rối loạn tăng động giảm chú ý (ADHD) không phải là lỗi của trẻ hay gia đình. Bài viết chia sẻ kiến thức và hướng hỗ trợ phù hợp...",
-    category: "Tâm lý trẻ em",
-  },
-  {
-    id: "ky-nang-giao-tiep-xa-hoi",
-    title: "Phát triển kỹ năng giao tiếp xã hội cho trẻ tự kỷ",
-    excerpt:
-      "Các hoạt động và chiến lược giúp trẻ tự kỷ cải thiện khả năng giao tiếp và tương tác xã hội trong cuộc sống hàng ngày...",
-    category: "Giáo dục đặc biệt",
-  },
-];
+export type {
+  KnowledgeArticle,
+  KnowledgeContentBlock,
+} from "./knowledge-articles-data";
+export { knowledgeArticles } from "./knowledge-articles-data";

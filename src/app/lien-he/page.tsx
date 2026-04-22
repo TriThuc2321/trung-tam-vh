@@ -3,9 +3,9 @@ import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Liên hệ",
+  title: "Liên hệ & Đặt lịch tư vấn",
   description:
-    "Liên hệ Trung tâm VH để tư vấn và đặt lịch hẹn. Địa chỉ: 150 Lê Văn Sỹ, Phường 10, Quận Phú Nhuận, TP.HCM.",
+    "Liên hệ Trung tâm VH để được tư vấn miễn phí và đặt lịch hẹn. Hotline / Zalo: 0817.999.081. Địa chỉ: 150 Lê Văn Sỹ, Phú Nhuận, TP.HCM.",
   alternates: { canonical: "/lien-he" },
 };
 

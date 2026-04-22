@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
+import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
 import { knowledgeArticles } from "@/lib/data";
-import placeholder from "@/assets/trung_tam/11.jpg";
+import imgChamNoi from "@/assets/dich_vu/can_thiep_som/1.jpg";
+import imgVonTu from "@/assets/dich_vu/can_thiep_som/2.jpg";
+import imgRlpTk from "@/assets/dich_vu/giao_duc_hoa_nhap/1.jpg";
+
+const articleCoverById: Record<string, StaticImageData> = {
+  "cham-noi": imgChamNoi,
+  "chien-luoc-von-tu": imgVonTu,
+  "roi-loan-pho-tu-ky-hoa-nhap": imgRlpTk,
+};
 
 export const metadata: Metadata = {
-  title: "Kiến thức",
+  title: "Kiến thức Tâm lý & Phát triển Trẻ Em",
   description:
-    "Chia sẻ kiến thức chuyên môn về tâm lý trẻ em, phát triển kỹ năng và hướng dẫn dành cho phụ huynh.",
+    "Chia sẻ kiến thức chuyên môn về tâm lý trẻ em, chậm nói, rối loạn phổ tự kỷ, can thiệp sớm và kỹ năng sống. Hướng dẫn thực tế từ đội ngũ chuyên gia Trung tâm VH dành cho phụ huynh.",
   alternates: { canonical: "/kien-thuc" },
 };
 
@@ -19,8 +28,6 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function KnowledgePage() {
-  const [featured, ...rest] = knowledgeArticles;
-
   return (
     <>
       {/* Page header */}
@@ -48,66 +55,16 @@ export default function KnowledgePage() {
 
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Featured article */}
-          {featured && (
-            <article className="group mb-12 grid overflow-hidden rounded-3xl border border-border bg-white shadow-sm transition-all hover:shadow-xl sm:grid-cols-2">
-              <div className="relative aspect-video overflow-hidden sm:aspect-auto">
-                <Image
-                  src={placeholder}
-                  alt={featured.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-r from-black/20 to-transparent sm:block" />
-              </div>
-              <div className="flex flex-col justify-center p-8 sm:p-10">
-                <span className="text-xs font-semibold uppercase tracking-widest text-primary-dark">
-                  Bài nổi bật
-                </span>
-                <span
-                  className={`mt-2 inline-block self-start rounded-full px-3 py-1 text-xs font-semibold ${
-                    categoryColors[featured.category] ?? "bg-muted/10 text-muted"
-                  }`}
-                >
-                  {featured.category}
-                </span>
-                <h2 className="mt-3 font-serif text-2xl font-bold leading-snug text-foreground transition-colors group-hover:text-secondary-dark sm:text-3xl">
-                  {featured.title}
-                </h2>
-                <p className="mt-3 leading-relaxed text-muted">
-                  {featured.excerpt}
-                </p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-dark">
-                  Đọc bài viết
-                  <svg
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </article>
-          )}
-
-          {/* Rest of articles */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {rest.map((article) => (
-              <article
+            {knowledgeArticles.map((article) => (
+              <Link
                 key={article.id}
-                className="group overflow-hidden rounded-3xl border border-border bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+                href={`/kien-thuc/${article.id}`}
+                className="group block overflow-hidden rounded-3xl border border-border bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <Image
-                    src={placeholder}
+                    src={articleCoverById[article.id] ?? imgChamNoi}
                     alt={article.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -146,7 +103,7 @@ export default function KnowledgePage() {
                     </svg>
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -159,7 +116,8 @@ export default function KnowledgePage() {
             Bạn có câu hỏi về sự phát triển của con?
           </h2>
           <p className="mt-3 text-sm text-muted">
-            Liên hệ để được tư vấn trực tiếp từ đội ngũ chuyên gia giàu kinh nghiệm.
+            Liên hệ để được tư vấn trực tiếp từ đội ngũ chuyên gia giàu kinh
+            nghiệm.
           </p>
           <Link
             href="/lien-he"

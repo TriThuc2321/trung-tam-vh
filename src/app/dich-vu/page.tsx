@@ -18,9 +18,9 @@ const serviceThumbnails = [
 ];
 
 export const metadata: Metadata = {
-  title: "Dịch vụ",
+  title: "Dịch vụ Can thiệp & Giáo dục Trẻ Em",
   description:
-    "Các dịch vụ chuyên môn tại Trung tâm VH: khám - test tâm lý, can thiệp sớm, giáo dục hoà nhập, kỹ năng sống và tham vấn, điều trị tâm lý.",
+    "Trung tâm VH cung cấp đầy đủ các dịch vụ: khám - test tâm lý, can thiệp sớm (18 tháng–6 tuổi), giáo dục hòa nhập, kỹ năng sống và tham vấn điều trị tâm lý. Đội ngũ chuyên gia giàu kinh nghiệm tại Phú Nhuận, TP.HCM.",
   alternates: { canonical: "/dich-vu" },
 };
 
