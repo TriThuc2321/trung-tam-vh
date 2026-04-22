@@ -24,10 +24,21 @@ export const metadata: Metadata = {
     "Trung tâm VH chuyên khám tâm lý, can thiệp sớm, giáo dục hòa nhập, kỹ năng sống và tham vấn tâm lý cho trẻ em tại Phú Nhuận, TP.HCM. Đội ngũ chuyên gia giàu kinh nghiệm, chương trình cá nhân hóa.",
   alternates: { canonical: "/" },
   openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    siteName: siteConfig.fullName,
     title: `${siteConfig.fullName} — ${siteConfig.slogan}`,
     description:
       "Trung tâm VH chuyên khám tâm lý, can thiệp sớm, giáo dục hòa nhập, kỹ năng sống và tham vấn tâm lý cho trẻ em tại Phú Nhuận, TP.HCM.",
-    url: siteConfig.url,
+    url: `${siteConfig.url}/`,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.fullName} — ${siteConfig.slogan}`,
+      },
+    ],
   },
 };
 
