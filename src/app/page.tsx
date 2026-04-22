@@ -3,11 +3,11 @@ import Link from "next/link";
 import heroBg from "@/assets/trung_tam/1.jpg";
 import aboutImg from "@/assets/trung_tam/2.jpg";
 // Service activity images per trang_chu.txt
-import svcKhamTest from "@/assets/hoat_dong/49.jpg";
-import svcCanThiep from "@/assets/hoat_dong/11.jpg";
-import svcHoaNhap from "@/assets/hoat_dong/27.jpg";
-import svcKyNang from "@/assets/hoat_dong/32.jpg";
-import svcThamVan from "@/assets/dich_vu/2.jpg";
+import svcKhamTest from "@/assets/linh_vuc_hoat_dong/kham_test_tam_ly.jpg";
+import svcCanThiep from "@/assets/linh_vuc_hoat_dong/can_thiep_som.jpg";
+import svcHoaNhap from "@/assets/linh_vuc_hoat_dong/giao_duc_hoa_nhap.jpg";
+import svcKyNang from "@/assets/linh_vuc_hoat_dong/ky_nang_song.jpg";
+import svcThamVan from "@/assets/linh_vuc_hoat_dong/tham_van_tam_ly.jpg";
 // Facility gallery
 import csvc1 from "@/assets/co_so_vat_chat/1.jpg";
 import csvc2 from "@/assets/co_so_vat_chat/2.jpg";

@@ -4,48 +4,48 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { serviceDetails, services } from "@/lib/data";
 
-// Khám - test tâm lý
-import dichVu1 from "@/assets/dich_vu/1.jpg";
-// Can thiệp sớm
-import dichVu3 from "@/assets/dich_vu/3.jpg";
-import dichVu4 from "@/assets/dich_vu/4.jpg";
-import dichVu5 from "@/assets/dich_vu/5.jpg";
-import dichVu6 from "@/assets/dich_vu/6.jpg";
-import dichVu7 from "@/assets/dich_vu/7.jpg";
-// Giáo dục hoà nhập
-import dichVu8 from "@/assets/dich_vu/8.jpg";
-import dichVu9 from "@/assets/dich_vu/9.jpg";
-import dichVu10 from "@/assets/dich_vu/10.jpg";
-// Kỹ năng sống
-import dichVu11 from "@/assets/dich_vu/11.jpg";
-import dichVu13 from "@/assets/dich_vu/13.jpg";
+import canThiepSom1 from "@/assets/dich_vu/can_thiep_som/1.jpg";
+import canThiepSom2 from "@/assets/dich_vu/can_thiep_som/2.jpg";
+import canThiepSom3 from "@/assets/dich_vu/can_thiep_som/3.jpg";
+import canThiepSom4 from "@/assets/dich_vu/can_thiep_som/4.jpg";
+import giaoDucHoaNhap1 from "@/assets/dich_vu/giao_duc_hoa_nhap/1.jpg";
+import giaoDucHoaNhap2 from "@/assets/dich_vu/giao_duc_hoa_nhap/2.jpg";
+import giaoDucHoaNhap3 from "@/assets/dich_vu/giao_duc_hoa_nhap/3.jpg";
+import khamTamLy1 from "@/assets/dich_vu/kham_test_tam_ly/1.jpg";
+import khamTamLy2 from "@/assets/dich_vu/kham_test_tam_ly/2.jpg";
+import kyNangSong1 from "@/assets/dich_vu/ky_nang_song/1.jpg";
 // Tham vấn
 import thamVan from "@/assets/trung_tam/9.jpg";
 
 type CourseImage = { src: Parameters<typeof Image>[0]["src"]; alt: string };
 
-const serviceMainImages = [dichVu1, dichVu3, dichVu8, dichVu11, thamVan];
+const serviceMainImages = [
+  khamTamLy1,
+  canThiepSom1,
+  giaoDucHoaNhap1,
+  kyNangSong1,
+  thamVan,
+];
 
 const serviceFeatureImages: (Parameters<typeof Image>[0]["src"] | null)[] = [
+  khamTamLy2,
+  canThiepSom2,
+  giaoDucHoaNhap2,
   null,
-  null,
-  null,
-  dichVu13,
   null,
 ];
 
 const serviceCourseImages: (CourseImage[] | null)[] = [
   null,
   [
-    { src: dichVu4, alt: "Khoá cá nhân can thiệp sớm" },
-    { src: dichVu5, alt: "Khoá cá nhân can thiệp sớm 2" },
-    { src: dichVu6, alt: "Khoá nhóm can thiệp sớm" },
-    { src: dichVu7, alt: "Khoá bán trú can thiệp sớm" },
+    { src: canThiepSom2, alt: "Khóa cá nhân can thiệp sớm" },
+    { src: canThiepSom3, alt: "Khóa nhóm can thiệp sớm" },
+    { src: canThiepSom4, alt: "Khóa bán trú can thiệp sớm" },
   ],
   [
-    { src: dichVu8, alt: "Khoá cá nhân giáo dục hoà nhập" },
-    { src: dichVu9, alt: "Khoá nhóm giáo dục hoà nhập" },
-    { src: dichVu10, alt: "Khoá bán trú giáo dục hoà nhập" },
+    { src: giaoDucHoaNhap1, alt: "Khóa cá nhân giáo dục hòa nhập" },
+    { src: giaoDucHoaNhap2, alt: "Khóa nhóm giáo dục hòa nhập" },
+    { src: giaoDucHoaNhap3, alt: "Khóa bán trú giáo dục hòa nhập" },
   ],
   null,
   null,
@@ -486,8 +486,15 @@ export default async function ServiceDetailPage({ params }: Props) {
                           />
                         </div>
                       )}
-                      <div className="p-4 text-sm leading-relaxed text-muted">
-                        {course}
+                      <div className="space-y-2 p-4">
+                        <h3 className="font-serif text-lg font-bold text-secondary-dark">
+                          {course.title}
+                        </h3>
+                        {course.description && (
+                          <p className="text-sm leading-relaxed text-muted">
+                            {course.description}
+                          </p>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -503,9 +510,14 @@ export default async function ServiceDetailPage({ params }: Props) {
                       <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/12 text-xl font-bold text-primary-dark">
                         {ci + 1}
                       </div>
-                      <p className="text-sm leading-relaxed text-muted">
-                        {course}
-                      </p>
+                      <h3 className="font-serif text-lg font-bold text-secondary-dark">
+                        {course.title}
+                      </h3>
+                      {course.description && (
+                        <p className="mt-2 text-sm leading-relaxed text-muted">
+                          {course.description}
+                        </p>
+                      )}
                     </li>
                   ))}
                 </ul>

@@ -11,7 +11,7 @@ export const siteConfig = {
     "150 Lê Văn Sỹ, Phường Phú Nhuận, TP. Hồ Chí Minh, Việt Nam",
   email: "kinangsongvh@gmail.com",
   phone: "0817.999.081",
-  url: "https://trungtamvh.vn",
+  url: "https://www.trungtamvh.edu.vn",
 };
 
 export const navLinks = [
@@ -113,6 +113,11 @@ export type ServiceProcessStep = {
   description: string;
 };
 
+export type ServiceCourse = {
+  title: string;
+  description?: string;
+};
+
 export type ServiceDetail = {
   id: string;
   eyebrow?: string;
@@ -130,7 +135,7 @@ export type ServiceDetail = {
   featuresTitle?: string;
   features?: string[];
   coursesTitle?: string;
-  courses?: string[];
+  courses?: ServiceCourse[];
   team?: string[];
 };
 
@@ -227,9 +232,21 @@ export const serviceDetails: ServiceDetail[] = [
     ],
     coursesTitle: "Chương trình can thiệp sớm tại VH có những khóa học nào?",
     courses: [
-      "Khóa cá nhân: một giáo viên với một trẻ, mỗi ca kéo dài một giờ học để theo sát biểu hiện và điều chỉnh can thiệp phù hợp.",
-      "Khóa nhóm: học theo nhóm nhỏ 2 - 3 học viên để tăng kỹ năng tương tác xã hội và hỗ trợ quan sát, điều chỉnh tốt hơn.",
-      "Khóa bán trú: kết hợp can thiệp cá nhân và nhóm nhỏ xuyên suốt trong ngày, tối ưu môi trường học tập cho từng nhu cầu riêng biệt.",
+      {
+        title: "Khóa cá nhân",
+        description:
+          "Một giáo viên với một trẻ, mỗi ca kéo dài một giờ học để theo sát biểu hiện và điều chỉnh can thiệp phù hợp.",
+      },
+      {
+        title: "Khóa nhóm",
+        description:
+          "Học theo nhóm nhỏ 2 - 3 học viên để tăng kỹ năng tương tác xã hội và hỗ trợ quan sát, điều chỉnh tốt hơn.",
+      },
+      {
+        title: "Khóa bán trú",
+        description:
+          "Kết hợp can thiệp cá nhân và nhóm nhỏ xuyên suốt trong ngày, tối ưu môi trường học tập cho từng nhu cầu riêng biệt.",
+      },
     ],
   },
   {
@@ -276,9 +293,21 @@ export const serviceDetails: ServiceDetail[] = [
     coursesTitle:
       "Chương trình giáo dục hoà nhập tại VH có những khóa học nào?",
     courses: [
-      "Khóa cá nhân: một giáo viên với một trẻ tại phòng riêng, tối ưu không gian học tập và giảm yếu tố phân tán chú ý.",
-      "Khóa nhóm: nhóm nhỏ 3 - 4 trẻ để tăng tương tác, kết nối bạn bè và xây dựng môi trường lớp học thu nhỏ.",
-      "Khóa bán trú: kết hợp cả hình thức can thiệp nhóm và cá nhân để đáp ứng nhu cầu riêng biệt của từng trẻ.",
+      {
+        title: "Khóa cá nhân",
+        description:
+          "Một giáo viên với một trẻ tại phòng riêng, tối ưu không gian học tập và giảm yếu tố phân tán chú ý.",
+      },
+      {
+        title: "Khóa nhóm",
+        description:
+          "Nhóm nhỏ 3 - 4 trẻ để tăng tương tác, kết nối bạn bè và xây dựng môi trường lớp học thu nhỏ.",
+      },
+      {
+        title: "Khóa bán trú",
+        description:
+          "Kết hợp cả hình thức can thiệp nhóm và cá nhân để đáp ứng nhu cầu riêng biệt của từng trẻ.",
+      },
     ],
   },
   {
@@ -303,9 +332,21 @@ export const serviceDetails: ServiceDetail[] = [
     ],
     coursesTitle: "Các khóa học giáo dục kỹ năng sống tại VH",
     courses: [
-      "Khóa giáo dục kỹ năng sống bán trú",
-      "Khóa giáo dục kỹ năng sống một buổi",
-      "Lớp kỹ năng sống bán trú hè 'Hè trải nghiệm' được tổ chức hằng năm để trẻ vừa học vừa chơi và trưởng thành hơn mỗi ngày.",
+      {
+        title: "Khóa kỹ năng sống bán trú",
+        description:
+          "Lịch học xuyên ngày giúp trẻ rèn nền nếp, tự lập và kỹ năng sinh hoạt trong môi trường tập thể.",
+      },
+      {
+        title: "Khóa kỹ năng sống một buổi",
+        description:
+          "Phù hợp với lịch học linh hoạt, tập trung theo nhóm kỹ năng trọng tâm theo từng độ tuổi.",
+      },
+      {
+        title: "Lớp hè \"Hè trải nghiệm\"",
+        description:
+          "Lớp kỹ năng sống bán trú hè được tổ chức hằng năm để trẻ vừa học vừa chơi và trưởng thành hơn mỗi ngày.",
+      },
     ],
   },
   {

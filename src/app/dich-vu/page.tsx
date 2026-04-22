@@ -3,13 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/data";
 
-import dichVu1 from "@/assets/dich_vu/1.jpg";
-import dichVu3 from "@/assets/dich_vu/3.jpg";
-import dichVu8 from "@/assets/dich_vu/8.jpg";
-import dichVu11 from "@/assets/dich_vu/11.jpg";
+import canThiepSom1 from "@/assets/dich_vu/can_thiep_som/1.jpg";
+import giaoDucHoaNhap1 from "@/assets/dich_vu/giao_duc_hoa_nhap/1.jpg";
+import khamTamLy1 from "@/assets/dich_vu/kham_test_tam_ly/1.jpg";
+import kyNangSong1 from "@/assets/dich_vu/ky_nang_song/1.jpg";
 import thamVan from "@/assets/trung_tam/9.jpg";
 
-const serviceThumbnails = [dichVu1, dichVu3, dichVu8, dichVu11, thamVan];
+const serviceThumbnails = [
+  khamTamLy1,
+  canThiepSom1,
+  giaoDucHoaNhap1,
+  kyNangSong1,
+  thamVan,
+];
 
 export const metadata: Metadata = {
   title: "Dịch vụ",
