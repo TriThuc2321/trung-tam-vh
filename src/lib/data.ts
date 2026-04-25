@@ -388,43 +388,10 @@ export const serviceDetails: ServiceDetail[] = [
   },
 ];
 
-export const newsArticles = [
-  {
-    id: "hoi-thao-phat-trien-tre",
-    title: "Hội thảo: Hỗ trợ phát triển toàn diện cho trẻ có nhu cầu đặc biệt",
-    excerpt:
-      "Trung tâm VH phối hợp tổ chức hội thảo chuyên đề về các phương pháp hỗ trợ phát triển dành cho trẻ em có nhu cầu đặc biệt...",
-    date: "2025-12-15",
-    category: "Sự kiện",
-  },
-  {
-    id: "khai-giang-ky-nang-song",
-    title: "Khai giảng lớp kỹ năng sống cho trẻ 5-8 tuổi",
-    excerpt:
-      "Trung tâm VH thông báo mở lớp kỹ năng sống mới dành cho trẻ từ 5 đến 8 tuổi, với chương trình phong phú và đa dạng...",
-    date: "2025-11-20",
-    category: "Thông báo",
-  },
-  {
-    id: "hop-tac-truong-hoc",
-    title: "Trung tâm VH ký kết hợp tác với các trường mầm non trên địa bàn",
-    excerpt:
-      "Nhằm tăng cường hỗ trợ giáo dục hoà nhập, Trung tâm VH chính thức ký kết hợp tác cùng nhiều trường mầm non tại Quận Phú Nhuận...",
-    date: "2025-10-08",
-    category: "Tin tức",
-  },
-  {
-    id: "ket-qua-can-thiep-2025",
-    title: "Báo cáo kết quả can thiệp năm 2025: Nhiều trẻ tiến bộ vượt bậc",
-    excerpt:
-      "Tổng kết chương trình can thiệp năm 2025, Trung tâm VH ghi nhận nhiều trường hợp trẻ có tiến bộ rõ rệt về ngôn ngữ, hành vi và kỹ năng xã hội...",
-    date: "2025-09-30",
-    category: "Tin tức",
-  },
-];
-
 export type {
   KnowledgeArticle,
   KnowledgeContentBlock,
 } from "./knowledge-articles-data";
 export { knowledgeArticles } from "./knowledge-articles-data";
+export type { NewsArticle, NewsContentBlock } from "./news-articles-data";
+export { getNewsArticleById, newsArticles } from "./news-articles-data";
