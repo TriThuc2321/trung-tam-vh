@@ -20,13 +20,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/kien-thuc" },
 };
 
-const categoryColors: Record<string, string> = {
-  "Phát triển trẻ em": "bg-primary/15 text-primary-dark",
-  "Kỹ năng làm cha mẹ": "bg-secondary/15 text-secondary-dark",
-  "Tâm lý trẻ em": "bg-muted/15 text-foreground",
-  "Giáo dục đặc biệt": "bg-primary/10 text-secondary-dark",
-};
-
 export default function KnowledgePage() {
   return (
     <>
