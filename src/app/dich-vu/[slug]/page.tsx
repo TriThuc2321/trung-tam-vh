@@ -6,7 +6,6 @@ import { serviceDetails, services, siteConfig } from "@/lib/data";
 
 import canThiepSom1 from "@/assets/dich_vu/can_thiep_som/1.jpg";
 import canThiepSom2 from "@/assets/dich_vu/can_thiep_som/2.jpg";
-import canThiepSom3 from "@/assets/dich_vu/can_thiep_som/3.jpg";
 import canThiepSom4 from "@/assets/dich_vu/can_thiep_som/4.jpg";
 import giaoDucHoaNhap1 from "@/assets/dich_vu/giao_duc_hoa_nhap/1.jpg";
 import giaoDucHoaNhap2 from "@/assets/dich_vu/giao_duc_hoa_nhap/2.jpg";
@@ -14,6 +13,9 @@ import giaoDucHoaNhap3 from "@/assets/dich_vu/giao_duc_hoa_nhap/3.jpg";
 import khamTamLy1 from "@/assets/dich_vu/kham_test_tam_ly/1.jpg";
 import khamTamLy2 from "@/assets/dich_vu/kham_test_tam_ly/2.jpg";
 import kyNangSong1 from "@/assets/dich_vu/ky_nang_song/1.jpg";
+import kyNangSong2 from "@/assets/dich_vu/ky_nang_song/2.jpg";
+import kyNangSong3 from "@/assets/dich_vu/ky_nang_song/3.jpg";
+import kyNangSong4 from "@/assets/dich_vu/ky_nang_song/4.jpg";
 // Tham vấn
 import thamVan from "@/assets/trung_tam/9.jpg";
 
@@ -31,7 +33,7 @@ const serviceFeatureImages: (Parameters<typeof Image>[0]["src"] | null)[] = [
   khamTamLy2,
   canThiepSom2,
   giaoDucHoaNhap2,
-  null,
+  kyNangSong2,
   null,
 ];
 
@@ -39,15 +41,19 @@ const serviceCourseImages: (CourseImage[] | null)[] = [
   null,
   [
     { src: canThiepSom2, alt: "Khóa cá nhân can thiệp sớm" },
-    { src: canThiepSom3, alt: "Khóa nhóm can thiệp sớm" },
+    { src: canThiepSom1, alt: "Khóa nhóm can thiệp sớm" },
     { src: canThiepSom4, alt: "Khóa bán trú can thiệp sớm" },
   ],
   [
     { src: giaoDucHoaNhap1, alt: "Khóa cá nhân giáo dục hòa nhập" },
-    { src: giaoDucHoaNhap2, alt: "Khóa nhóm giáo dục hòa nhập" },
+    { src: canThiepSom1, alt: "Khóa nhóm giáo dục hòa nhập" },
     { src: giaoDucHoaNhap3, alt: "Khóa bán trú giáo dục hòa nhập" },
   ],
-  null,
+  [
+    { src: kyNangSong2, alt: "Khóa cá nhân kỹ năng sống" },
+    { src: kyNangSong3, alt: "Khóa nhóm kỹ năng sống" },
+    { src: kyNangSong4, alt: "Khóa bán trú kỹ năng sống" },
+  ],
   null,
 ];
 
