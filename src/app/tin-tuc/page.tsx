@@ -68,14 +68,12 @@ export default function NewsPage() {
           }}
         />
         <div className="relative mx-auto max-w-3xl px-4 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary/80">
-            Trung tâm VH
-          </p>
           <h1 className="font-serif text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Tin tức
+            TRUNG TÂM VH
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-white/75">
-            Cập nhật các hoạt động, sự kiện và thông tin mới nhất từ Trung tâm VH.
+            Cập nhật các hoạt động, sự kiện và thông tin mới nhất từ Trung tâm
+            VH.
           </p>
         </div>
       </section>

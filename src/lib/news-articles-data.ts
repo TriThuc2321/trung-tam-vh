@@ -106,7 +106,7 @@ export const newsArticles: NewsArticle[] = [
     title: "Chương trình sàng lọc rối loạn miễn phí tại trường mầm non",
     excerpt:
       "Trung tâm VH triển khai sàng lọc rối loạn phát triển miễn phí tại các trường mầm non, đồng hành cùng nhà trường và phụ huynh: phát hiện sớm – hỗ trợ kịp thời – định hướng đúng cho trẻ.",
-    date: "2025-04-01",
+    date: "2026-04-01",
     category: "Thông báo",
     author: "Trung tâm VH",
     thumbnail: b3_0,
@@ -153,7 +153,7 @@ export const newsArticles: NewsArticle[] = [
       "Báo cáo kết quả hoạt động Ngày hội sàng lọc rối loạn phát triển miễn phí tại Trung tâm VH",
     excerpt:
       "Tháng 3, Trung tâm VH tổ chức thành công Ngày hội sàng lọc rối loạn phát triển miễn phí — hoạt động triển khai định kỳ 3 tháng/lần nhằm hỗ trợ phụ huynh nhận diện sớm các dấu hiệu bất thường trong quá trình phát triển của trẻ.",
-    date: "2025-03-01",
+    date: "2026-03-01",
     category: "Tin tức",
     author: "Trung tâm VH",
     thumbnail: thumbKham,

@@ -48,7 +48,6 @@ export const coreValues = [
 export const services = [
   {
     id: "kham-test-tam-ly",
-    icon: "🧠",
     title: "Khám - test tâm lý",
     shortDesc:
       "Khám - test tâm lý - đánh giá phát triển nhằm xác định khó khăn tâm lý, mức độ phát triển, điểm mạnh và điểm yếu của mỗi trẻ.",
@@ -57,7 +56,6 @@ export const services = [
   },
   {
     id: "can-thiep-som",
-    icon: "🌱",
     title: "Can thiệp sớm",
     shortDesc:
       "Chương trình dành cho trẻ từ 18 tháng - 6 tuổi, hỗ trợ khắc phục khó khăn cốt lõi và thúc đẩy phát triển phù hợp với lứa tuổi.",
@@ -66,7 +64,6 @@ export const services = [
   },
   {
     id: "giao-duc-hoa-nhap",
-    icon: "🤝",
     title: "Giáo dục hoà nhập",
     shortDesc:
       "Dành cho trẻ từ 6 tuổi - 13 tuổi, hỗ trợ phát triển điểm mạnh và giảm thiểu những hành vi chưa phù hợp.",
@@ -75,7 +72,6 @@ export const services = [
   },
   {
     id: "ky-nang-song",
-    icon: "⭐",
     title: "Kỹ năng sống",
     shortDesc:
       "Chương trình dành cho trẻ mầm non đến tiểu học, giúp trang bị những kỹ năng cơ bản để thích nghi và xử lý tình huống hằng ngày.",
@@ -84,7 +80,6 @@ export const services = [
   },
   {
     id: "tham-van-dieu-tri-tam-ly",
-    icon: "💬",
     title: "Tham vấn, điều trị tâm lý",
     shortDesc:
       "Dịch vụ tham vấn, tư vấn và điều trị tâm lý nhằm tháo gỡ những vướng mắc trong học tập và cuộc sống.",
@@ -177,8 +172,8 @@ export const serviceDetails: ServiceDetail[] = [
       "Test MMPI-A là trắc nghiệm đánh giá nhân cách toàn diện với các thang đo dành riêng cho thanh thiếu niên, hỗ trợ xác định vấn đề, chẩn đoán và lập kế hoạch điều trị cho trẻ từ 14 - 18 tuổi.",
     ],
     team: [
-      "Bác sĩ chuyên khoa II Thái Thị Thanh Thuỷ - thầy thuốc ưu tú, nguyên Trưởng khoa tâm lý Bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám và điều trị tâm lý nhi.",
-      "Thạc sĩ tâm lý Nguyễn Thị Vân, hơn 10 năm kinh nghiệm trong đánh giá, giáo dục can thiệp trẻ rối loạn phát triển.",
+      "Bác sĩ chuyên khoa II <strong>Thái Thị Thanh Thuỷ</strong> - thầy thuốc ưu tú, nguyên Trưởng khoa tâm lý Bệnh viện Nhi đồng 2, hơn 30 năm kinh nghiệm khám và điều trị tâm lý nhi.",
+      "Thạc sĩ tâm lý <strong>Nguyễn Thị Vân</strong>, hơn 10 năm kinh nghiệm trong đánh giá, giáo dục can thiệp trẻ rối loạn phát triện.",
     ],
   },
   {

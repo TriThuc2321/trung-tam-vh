@@ -108,9 +108,24 @@ export default async function ServiceDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Trang chủ", item: siteConfig.url },
-      { "@type": "ListItem", position: 2, name: "Dịch vụ", item: `${siteConfig.url}/dich-vu` },
-      { "@type": "ListItem", position: 3, name: summary.title, item: `${siteConfig.url}/dich-vu/${slug}` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Trang chủ",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Dịch vụ",
+        item: `${siteConfig.url}/dich-vu`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: summary.title,
+        item: `${siteConfig.url}/dich-vu/${slug}`,
+      },
     ],
   };
 
@@ -205,15 +220,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         />
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-start gap-5">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-4xl shadow-inner backdrop-blur-sm">
-              {summary.icon}
-            </span>
             <div className="min-w-0 flex-1">
-              {service.eyebrow && (
-                <p className="text-xs font-semibold uppercase tracking-widest text-primary/90">
-                  {service.eyebrow}
-                </p>
-              )}
               <h1 className="mt-1 font-serif text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
                 {summary.title}
               </h1>
@@ -290,14 +297,14 @@ export default async function ServiceDetailPage({ params }: Props) {
                   🎯
                 </span>
                 {service.targetTitle && (
-                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-2xl">
+                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-3xl">
                     {service.targetTitle}
                   </h2>
                 )}
               </div>
 
               {service.targetDescription && (
-                <p className="mb-5 rounded-2xl bg-secondary-light/60 px-5 py-4 text-sm leading-relaxed text-secondary-dark sm:text-base">
+                <p className="mb-5 rounded-2xl bg-secondary-light/60 px-5 py-4 text-sm leading-relaxed text-secondary-dark sm:text-lg">
                   {service.targetDescription}
                 </p>
               )}
@@ -328,7 +335,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   >
                     📋
                   </span>
-                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-2xl">
+                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-3xl">
                     {service.sectionTitle}
                   </h2>
                 </div>
@@ -340,10 +347,10 @@ export default async function ServiceDetailPage({ params }: Props) {
                       key={item}
                       className="flex items-center gap-4 rounded-2xl border border-border bg-white px-5 py-4 shadow-sm"
                     >
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary-light text-sm font-bold text-secondary-dark">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary-light text-base font-bold text-secondary-dark">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="text-sm font-medium text-foreground">
+                      <span className="text-base font-medium text-foreground">
                         {item}
                       </span>
                     </li>
@@ -373,10 +380,12 @@ export default async function ServiceDetailPage({ params }: Props) {
                     key={ni}
                     className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary-light/30 p-6"
                   >
-                    <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-sm font-bold text-white shadow-sm">
+                    <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-base font-bold text-white shadow-sm">
                       {ni + 1}
                     </span>
-                    <p className="text-sm leading-relaxed text-muted">{note}</p>
+                    <p className="text-base leading-relaxed text-muted">
+                      {note}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -387,13 +396,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           {service.processSteps && (
             <section className="rounded-3xl bg-secondary-light/50 px-6 py-10 sm:px-10">
               <div className="mb-2 flex items-center gap-3">
-                <span
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-secondary/20 text-base"
-                  aria-hidden
-                >
-                  🔄
-                </span>
-                <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-2xl">
+                <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-3xl">
                   {service.processTitle}
                 </h2>
               </div>
@@ -406,7 +409,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 {service.processSteps.map((step, si) => (
                   <li key={step.title} className="flex gap-5">
                     <div className="flex flex-col items-center">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-secondary text-sm font-bold text-white shadow-md">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-secondary text-lg font-bold text-white shadow-md">
                         {si + 1}
                       </div>
                       {si < service.processSteps!.length - 1 && (
@@ -418,10 +421,10 @@ export default async function ServiceDetailPage({ params }: Props) {
                         si < service.processSteps!.length - 1 ? "pb-8" : ""
                       }
                     >
-                      <h3 className="pt-2 font-semibold text-secondary-dark">
+                      <h3 className="text-lg font-semibold text-secondary-dark">
                         {step.title.replace(/^\d+\.\s*/, "")}
                       </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-muted">
+                      <p className="mt-1 text-base leading-relaxed text-muted">
                         {step.description}
                       </p>
                     </div>
@@ -442,14 +445,14 @@ export default async function ServiceDetailPage({ params }: Props) {
                   >
                     💡
                   </span>
-                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-2xl">
+                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-3xl">
                     {service.featuresTitle}
                   </h2>
                 </div>
               )}
               <div className="grid gap-8 lg:grid-cols-6">
                 {featureImg && (
-                  <div className="relative min-h-[220px] overflow-hidden rounded-3xl shadow-md lg:col-span-3">
+                  <div className="relative min-h-[400px] lg:min-h-[220px] overflow-hidden rounded-3xl shadow-md lg:col-span-3">
                     <Image
                       src={featureImg}
                       alt={`${summary.title} - chương trình`}
@@ -493,7 +496,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   >
                     📚
                   </span>
-                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-2xl">
+                  <h2 className="font-serif text-xl font-bold text-secondary-dark sm:text-3xl">
                     {service.coursesTitle}
                   </h2>
                 </div>
@@ -578,17 +581,15 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </h2>
               </div>
               <ul className="grid gap-4 md:grid-cols-2">
-                {service.team.map((member, mi) => (
+                {service.team.map((member) => (
                   <li
                     key={member}
                     className="flex gap-4 rounded-2xl border border-border bg-white p-5 shadow-sm"
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-secondary-light text-lg font-bold text-secondary-dark">
-                      {mi === 0 ? "👩‍⚕️" : "👩‍🎓"}
-                    </div>
-                    <p className="text-sm leading-relaxed text-muted">
-                      {member}
-                    </p>
+                    <div
+                      className="text-sm leading-relaxed text-muted"
+                      dangerouslySetInnerHTML={{ __html: member }}
+                    />
                   </li>
                 ))}
               </ul>

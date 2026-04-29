@@ -40,7 +40,7 @@ export default function ServicesPage() {
           aria-hidden
         />
         <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary/90">
+          <p className="mb-3 text-lg font-semibold uppercase tracking-widest text-primary/90">
             Trung tâm VH
           </p>
           <h1 className="font-serif text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -59,16 +59,6 @@ export default function ServicesPage() {
           aria-hidden
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center sm:mb-16">
-            <h2 className="font-serif text-2xl font-bold text-secondary-dark sm:text-3xl">
-              Lựa chọn dịch vụ
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-muted">
-              Chọn một hạng mục để xem nội dung chi tiết, quy trình và các
-              khóa học tương ứng.
-            </p>
-          </div>
-
           <ul className="grid gap-8 sm:grid-cols-2 lg:gap-10 xl:grid-cols-2">
             {services.map((service, i) => (
               <li key={service.id}>
@@ -88,9 +78,6 @@ export default function ServicesPage() {
                       className="absolute inset-0 bg-linear-to-t from-secondary-dark/70 via-secondary-dark/15 to-transparent"
                       aria-hidden
                     />
-                    <div className="absolute left-4 top-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 text-2xl shadow-md backdrop-blur-sm">
-                      <span aria-hidden>{service.icon}</span>
-                    </div>
                     <p className="absolute bottom-4 left-4 right-4 font-serif text-xl font-bold leading-snug text-white drop-shadow-sm sm:text-2xl">
                       {service.title}
                     </p>
@@ -134,17 +121,17 @@ export default function ServicesPage() {
         />
         <div className="relative mx-auto max-w-2xl px-4 text-center">
           <h2 className="font-serif text-3xl font-bold sm:text-4xl">
-            Bạn chưa chắc dịch vụ nào phù hợp?
+            Bạn cần tư vấn cho con?
           </h2>
           <p className="mt-4 leading-relaxed text-white/75">
-            Liên hệ với chúng tôi để được tư vấn miễn phí. Đội ngũ chuyên gia sẽ
-            giúp bạn lựa chọn hướng hỗ trợ tốt nhất cho con.
+            Hãy để Trung tâm VH đồng hành cùng bạn. Liên hệ ngay để được tư vấn
+            miễn phí và đặt lịch hẹn.
           </p>
           <Link
             href="/lien-he"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-9 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:bg-primary-dark hover:shadow-xl"
           >
-            Liên hệ tư vấn ngay
+            Liên hệ ngay
             <svg
               className="h-4 w-4"
               fill="none"

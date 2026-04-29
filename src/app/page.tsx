@@ -141,9 +141,6 @@ export default function HomePage() {
               <div className="absolute -bottom-5 -right-5 hidden h-32 w-32 rounded-2xl bg-primary/20 lg:block" />
             </div>
             <div>
-              <p className="text-md font-semibold uppercase tracking-widest text-primary-dark">
-                Về chúng tôi
-              </p>
               <h2 className="mt-2 font-serif text-4xl font-bold text-secondary-dark sm:text-5xl">
                 Về Trung tâm VH
               </h2>
@@ -184,11 +181,6 @@ export default function HomePage() {
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-3 left-4 flex items-center gap-2">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-sm backdrop-blur-sm">
-                      {service.icon}
-                    </span>
-                  </div>
                 </div>
                 <div className="p-5">
                   <h3 className="font-serif text-lg font-bold text-foreground transition-colors group-hover:text-secondary-dark">

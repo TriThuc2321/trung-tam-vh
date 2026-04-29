@@ -31,7 +31,7 @@ export default function Header() {
             <p className="font-serif text-lg font-bold text-secondary-dark sm:text-xl">
               {siteConfig.name}
             </p>
-            <p className="text-xs text-muted">{siteConfig.slogan}</p>
+            <p className="text-sm text-muted">{siteConfig.slogan}</p>
           </div>
         </Link>
 
@@ -41,10 +41,13 @@ export default function Header() {
               const servicesActive =
                 pathname === "/dich-vu" || pathname.startsWith("/dich-vu/");
               return (
-                <div key={link.href} className="group relative flex items-center">
+                <div
+                  key={link.href}
+                  className="group relative flex items-center"
+                >
                   <Link
                     href="/dich-vu"
-                    className={`relative flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                    className={`relative flex items-center gap-1 rounded-lg px-4 py-2 text-base font-medium transition-colors ${
                       servicesActive
                         ? "text-secondary-dark"
                         : "text-foreground/70 hover:text-secondary-dark"
@@ -83,21 +86,15 @@ export default function Header() {
                             className="flex gap-3 rounded-xl p-3 transition-colors hover:bg-primary-light/60"
                             role="menuitem"
                           >
-                            <span
-                              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-xl"
-                              aria-hidden
-                            >
-                              {s.icon}
-                            </span>
                             <span className="min-w-0 flex-1">
-                              <span className="line-clamp-1 font-semibold text-secondary-dark">
+                              <span className="line-clamp-1 font-semibold text-secondary-dark uppercase">
                                 {s.title}
                               </span>
-                              <span className="mt-0.5 line-clamp-2 text-xs leading-snug text-muted">
-                                {s.shortDesc}
-                              </span>
                             </span>
-                            <span className="shrink-0 self-center text-primary" aria-hidden>
+                            <span
+                              className="shrink-0 self-center text-primary"
+                              aria-hidden
+                            >
                               <svg
                                 className="h-4 w-4"
                                 fill="none"
@@ -132,7 +129,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                className={`relative rounded-lg px-4 py-2 text-base font-medium transition-colors ${
                   active
                     ? "text-secondary-dark"
                     : "text-foreground/70 hover:text-secondary-dark"
@@ -162,12 +159,30 @@ export default function Header() {
           aria-label={mobileOpen ? "Đóng menu" : "Mở menu"}
         >
           {mobileOpen ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M18 6 6 18" />
               <path d="m6 6 12 12" />
             </svg>
           ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M4 6h16" />
               <path d="M4 12h16" />
               <path d="M4 18h16" />
